@@ -425,7 +425,7 @@
 
 @media (min-width: 1025px) {
     .nav-primary .sub-menu {
-        display: block;
+        display: block !important;
         opacity: 0;
         transform: translateY(15px);
         pointer-events: none;
