@@ -8,11 +8,213 @@
 \*------------------------------------*/
 
 .wysiwyg { 
-/* TODO: Update styling to match prototypes */
+    position: relative;
+    color: var(--color-charcoal);
 }
 
 .bg-white {
-    background: #ffffff;
+    background: var(--color-white);
 }
 
-/* TODO: Add additional background colors */
+.bg-gray {
+    background: var(--color-teal);
+}
+
+.example-btn {
+    margin-top: 30px;
+}
+
+
+
+/* wysiwyg__sidebar */
+
+.wysiwyg__sidebar {
+    padding-top: 50px;
+}
+
+.wysiwyg__sidebar__column {
+    background: var(--color-white);
+    box-shadow: 0 0 24px rgba(29,66,138,0.16);
+    border-radius: 4px;
+    padding: 30px 34px 30px;
+}
+
+
+@media (min-width: 768px) {
+    .wysiwyg__sidebar__column {
+        padding: 50px 48px 40px;
+    }
+
+    .title-heading {
+        padding-bottom: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .wysiwyg__content-sidebar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .wysiwyg__sidebar {
+        width: 420px;
+        padding-top: 0;
+    }
+
+    .wysiwyg__content {
+        width: calc(100% - 420px);
+        padding-right: 33px;
+    }
+
+
+}
+
+
+
+
+/* table */
+
+.table-structure {
+    padding: 0 15px;
+    position: relative;
+    color: var(--color-charcoal);
+    box-shadow: 0 0 15px rgba(29,66,138,0.16);
+}
+
+.table-structure::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 75px;
+    width: 100%;
+    height: 2px;
+    background: rgba(29,66,138,0.15);
+}
+
+.table-structure table {
+    border-collapse: collapse;
+    width: 1098px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.table-structure table thead {
+    background-color: var(--color-white);
+    color: #161E43;
+}
+
+.table-structure table thead tr th {
+    padding: 24px 0 24px 20px;
+    text-align: left;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2em;
+    border: none;
+    color: #161E43;
+    font-family: 'Playfair Display', serif;
+}
+
+.table-structure table tbody tr {
+    background-color: var(--color-teal);
+}
+
+.table-structure table tbody tr:nth-child(odd) {
+    background-color: var(--color-white);
+}
+
+.table-structure table tbody tr td,
+.table-structure table tbody tr th {
+    padding: 9px 20px 9px 20px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-charcoal);
+    line-height: 1.4em;
+    vertical-align: middle;
+    font-family: 'Lato', sans-serif; 
+}
+
+.table-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #007680 var(--color-teal);
+    border-radius: 30px;
+    position: relative;
+    overflow-x: auto;
+    margin-right: -22px;
+    margin-left: -15px;
+    margin-bottom: 30px;
+    padding:  20px 0 20px 15px;
+}
+
+.table-scroll::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+    padding-bottom: 30px;
+    border-radius: 4px;
+}
+
+.table-scroll::-webkit-scrollbar-track {
+    background-clip: content-box;
+    border: 15px solid var(--color-teal);
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+    background-color: var(--color-teal);
+}
+
+.table-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-teal);
+}
+
+.table-scroll::-webkit-scrollbar-corner, 
+.table-scroll::-webkit-scrollbar-track {
+    background-color: var(--color-teal);
+}
+
+
+@media (min-width: 768px) {
+    .table-scroll {
+        margin-right: -52px;
+        margin-left: 0;
+        padding:  20px 0 20px 15px;
+    }
+
+    .table-structure {
+        width: 1120px;
+    }
+    
+
+}
+
+@media (min-width: 1200px) {
+
+    .table-structure table {
+        width: 100%;
+    }
+
+    .table-scroll {
+        margin-right: 0;
+        margin-left: 0;
+        padding:  15px 0 10px;
+        overflow: visible;
+    }
+
+    .table-structure {
+        width: 100%;
+        padding-bottom: 15px;
+    }
+
+    .table-structure table thead tr th {
+        padding: 24px 50px 24px 20px;
+    }
+
+    
+    .table-structure table tbody tr td,
+    .table-structure table tbody tr th {
+        padding: 9px 50px 9px 20px;
+    }
+
+}
+

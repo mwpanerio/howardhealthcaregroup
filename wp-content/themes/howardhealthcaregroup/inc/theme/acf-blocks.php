@@ -148,7 +148,7 @@ fx_register_block(
         'title'         => 'Homepage - Masthead Slider',
         'template'      => 'homepage/masthead-slider.php',
         'description'   => 'Slider block for the homepage masthead.',
-        'css'           => 'homepage/masthead-slider.css',
+        'css'           => 'homepage/masthead-static.css',
         'css_deps'      => [ 'fx_slick' ],
         'js'            => 'homepage/masthead-slider.js',
         'js_deps'       => [ 'fx_slick' ],

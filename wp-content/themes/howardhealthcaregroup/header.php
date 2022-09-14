@@ -7,7 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-    <?php // Insert Google Fonts <link> here. Please use &display=swap in your URL! ?>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> 
+    <!-- font-family: 'Lato', sans-serif; -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet"> 
+    <!-- font-family: 'Playfair Display', serif; -->
 
     <?php wp_head(); ?>
 </head>
@@ -17,34 +20,47 @@
     <?php wp_body_open(); ?>
 
     <?php
-        // gets client logo image set in Theme Settings
-        // @todo — replace with get_custom_logo
         $logo_id    = fx_get_client_logo_image_id(); 
         $home_url   = get_home_url();
     ?>
 
-    <header id="page-header" class="page-header">
-        <div class="site-logo-container">
-            <a class="site-logo" href="<?php echo esc_url( $home_url ); ?>">
-                <?php echo fx_get_image_tag( $logo_id, 'logo' ); ?>
-            </a>
-        </div>
-
-        <?php 
-        
-            /* Use the following code if building an Ubermenu mega menu on the site, otherwise delete:
-            <div class="mobile-menu">
-                <?php ubermenu_toggle(); ?>
+    <header class="page-header">
+        <div class="header-top">
+            <div class="container clearfix">
+                <div class="logo">
+                    <a class="site-logo" href="<?php echo esc_url( $home_url ); ?>">
+                        <?php echo fx_get_image_tag( $logo_id, 'img-responsive'); ?>
+                    </a>
+                </div>
+                <div class="header-right">
+                    <nav class="nav-primary">
+                        <?php
+                            wp_nav_menu( array(
+                                'menu'           => 'Header Menu', // Do not fall back to first non-empty menu.
+                            ) );
+                        ?>
+                    </nav>
+                    <div class="search js-search-toggle hidden-md-down"><i class="icon-search"></i></div>
+                    <div class="header-phone-btn hidden-xs-down"><a href="tel:(848) 456-8200" class="btn btn-primary"><i class="icon-phone"></i> (848) 456-8200</a></div>
+                    <div class="header-contact-btn hidden-xs-down"><a href="#" class="btn btn-primary">Contact Us</a></div>
+                    <div class="search js-search-toggle hidden-lg"><i class="icon-search"></i></div>
+                    <div class="toggle-menu hidden-lg"><i class="icon-responsive-menu"></i></div>
+                </div>
             </div>
-            <div class="desktop-menu">
-                <?php 
-                    // Output the ubermenu. Copy code from ubermenu settings in Wordpress and update here
-                    ubermenu( 'main' , array( 'menu' => 33 ) ); 
-                ?>
-            </div> 
-            */ 
-
-        ?>
+        </div>
+        <div class="mobile-header hidden-sm-up">
+            <div class="container clearfix">
+                <ul class="clearfix">
+                    <li><a href="tel:(848) 456-8200"><i class="icon-phone"></i> (848) 456-8200</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="desktop-menu__search">
+            <div class="container">
+                <div class="desktop-menu_wrap">
+                    <?php get_search_form(); ?>
+                </div>
+            </div>
+        </div>
     </header>
-
-    <?php get_search_form(); ?>

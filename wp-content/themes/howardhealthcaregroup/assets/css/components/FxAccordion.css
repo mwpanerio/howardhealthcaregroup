@@ -1,74 +1,118 @@
-.fxa-accordion {
+.fx-accordion {
     position: relative;
-    margin-bottom: 30px;
 }
 
-.fxa-accordion__panel__toggle {
+.fx-accordion__panels {
+    padding-top: 30px;
+}
+
+.fx-accordion__panel {
+    background-color: var(--color-white);
+    box-shadow: 0 0 16px rgba(29, 66, 138, 0.16);
+    border-radius: 4px;
+    padding-bottom: 10px;
+}
+
+.fx-accordion__panel__toggle {
     position: relative;
     list-style-type: none !important;
-    margin: 5px 0 0;
+    margin: 20px 0 0 15px;
     display: block;
-    color: inherit;
+    color: #161E43;
     line-height: normal;
-    background: #f5f5f5;
-    padding: 10px 35px 10px 20px;
+    background: none;
+    padding: 15px 125px 10px 0;
     text-decoration: none;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    width: 100%;
+    border:none;
     text-align: left;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 18px;
+    border-bottom: 2px solid rgba(29,66,138,0.15);
+    width: calc(100% - 15px);
 }
 
 
-.fxa-accordion__panel.is-expanded .fxa-accordion__panel__toggle,
-.fxa-accordion__panel__toggle:hover,
-.fxa-accordion__panel__toggle:focus {
-    color: inherit;
-    background: #fff;
-    text-decoration: none;
+.fx-accordion__panel.is-expanded .fx-accordion__panel__toggle,
+.fx-accordion__panel__toggle:hover,
+.fx-accordion__panel__toggle:focus {
+    color: #161E43;
 }
 
-.fxa-accordion__panel.is-expanded .fxa-accordion__panel__toggle {
-    border-radius: 4px 4px 0 0;
-    border-bottom: 1px solid #fff;
-}
 
-.fxa-accordion__panel .fxa-accordion__panel__toggle:after {
-    content: '';
+.fx-accordion__panel .fx-accordion__panel__toggle:after {
+    content: '\e901';
+    font-family: 'icomoon';
     position: absolute;
-    top: 14px;
-    right: 12px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 11px 7.5px 0 7.5px;
-    border-color: #374046 transparent transparent transparent;
+    top: 17px;
+    right: 15px;
+    font-weight: normal;
+    font-size: 15px;
+    color: var(--color-teal);
 }
 
-.fxa-accordion__panel.is-expanded .fxa-accordion__panel__toggle:after {
-    border-width: 0 7.5px 11px 7.5px;
-    border-color: transparent transparent #374046 transparent;
+.fx-accordion__panel .fx-accordion__panel__toggle:before {
+    content: 'Read More';
+    font-family: 'Lato', sans-serif;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--color-teal);
 }
 
-.fxa-accordion__panel:not(.is-expanded) .fxa-accordion__panel__content {
+.fx-accordion__panel.is-expanded .fx-accordion__panel__toggle:after {
+    content: '\e910';
+}
+
+
+.fx-accordion__panel.is-expanded .fx-accordion__panel__toggle:before {
+    content: 'Read Less';
+}
+
+
+.fx-accordion__panel:not(.is-expanded) .fx-accordion__panel__content {
     display: none;
 }
 
-.fxa-accordion__panel__content {
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-top: 0;
+.fx-accordion__panel__content {
+    padding: 10px;
+    margin: 15px 15px 5px 15px;
     overflow: hidden;
+    background-color: var(--color-teal);
+    border-radius: 4px;
 }
 
-@media (min-width: 1025px) {
-    .fxa-accordion__panel__content {
-        position: relative;
-        width: 100%;
-        border-radius: 4px;
-        border-top-right-radius: 0;
-        border-top-left-radius: 0;
-        border: 1px solid #ddd;
-        padding: 30px;
+@media (min-width: 768px) {
+
+    .fx-accordion__panels {
+        padding-top: 12px;
+    }
+
+    .fx-accordion__panel {
+        padding-bottom: 13px;
+    }
+
+    .fx-accordion__panel__toggle {
+        margin: 20px 0 0 35px;
+        padding: 25px 225px 10px 0;
+        font-size: 22px;
+        width: calc(100% - 35px);
+    }
+
+    .fx-accordion__panel .fx-accordion__panel__toggle:after {
+        top: 32px;
+        right: 35px;
+    }
+    
+    .fx-accordion__panel .fx-accordion__panel__toggle:before {
+        top: 30px;
+        right: 60px;
+    }
+
+    .fx-accordion__panel__content {
+        padding: 25px;
+        margin: 15px 35px 25px 35px;
     }
 }

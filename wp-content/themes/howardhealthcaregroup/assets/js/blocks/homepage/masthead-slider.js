@@ -2,11 +2,11 @@ var FX = ( function( FX, $ ) {
 
 
 	$( () => {
-		FX.HomepageMasthead.init()
+		FX.MastheadSlider.init()
 	})
 
 
-	FX.HomepageMasthead = {
+	FX.MastheadSlider = {
 		$slider: null,
 
 		init() {
@@ -18,12 +18,12 @@ var FX = ( function( FX, $ ) {
 		},
 
 		applySlick() {
-            // TODO configure settings for your slider here (ref: https://github.com/kenwheeler/slick/#settings)
-			// keep in mind, you don't need to declare default values
             this.$slider.slick( {
-                dots: true,
-                autoplay: true,
-                autoplaySpeed: 5000,
+                dots: false,
+				arrows: false,
+                autoplay: false,
+                slidesToShow: 1,
+                slidesToScroll: 1,
             });
 		}
 	}
