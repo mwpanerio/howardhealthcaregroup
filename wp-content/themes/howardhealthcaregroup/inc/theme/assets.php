@@ -113,6 +113,15 @@ function fx_theme_styles() {
         ]
     );
     
+    fx_assets_add_stylesheet(
+        [
+            'handle'        => 'fx_client_testimonial',
+            'src'           => $theme_url . '/assets/css/blocks/homepage/testimonials.css',
+            'dependencies'  => [ 'fx_slick' ],
+            'enqueue'       => ( has_block('acf/homepage-masthead-slider') )
+        ]
+    );
+
     /* Component-specific css. These will be enqueued per-block as dependencies or per-page as needed. These files can be edited to override default styling. */
     
     // Styles for social sharing buttons on blog pages
@@ -288,6 +297,15 @@ function fx_theme_scripts() {
             'enqueue'       => !is_admin(),
             'defer'         => true,
             'preload'       => true,
+        ]
+    );
+
+    fx_assets_add_script(
+        [
+            'handle'        => 'fx_client_testimonials',
+            'src'           => $theme_url . '/assets/js/blocks/homepage/testimonials-block-slider.js',
+            'dependencies'  => [ 'fx_slick' ],
+            'enqueue'       => ( has_block('acf/homepage-masthead-slider') ),
         ]
     );
     

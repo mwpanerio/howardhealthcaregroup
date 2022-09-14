@@ -156,6 +156,87 @@ fx_register_block(
     ]
 );
 
+fx_register_block(
+    [
+        'name'          => 'homepage-icon-with-text',
+        'title'         => 'Homepage - Icon With Text',
+        'template'      => 'homepage/icon-with-text.php',
+        'description'   => '',
+        'css'           => 'homepage/icon-with-text.css',
+        'category'      => 'fx-homepage-blocks',
+    ]
+);
+
+fx_register_block(
+    [
+        'name'          => 'homepage-half-image-text',
+        'title'         => 'Homepage - Half Image Text',
+        'template'      => 'homepage/half-image-text.php',
+        'description'   => '',
+        'css_deps'      => [ 'fx_contained_image_text' ],
+        'category'      => 'fx-homepage-blocks',
+    ]
+);
+
+fx_register_block(
+    [
+        'name'          => 'homepage-testimonial-with-form',
+        'title'         => 'Homepage - Testimonial With Form',
+        'template'      => 'homepage/testimonial-with-form.php',
+        'description'   => '',
+        'css'           => 'homepage/testimonial-with-form.css',
+        'css_deps'      => [ 'fx_slick' ],
+        'js'            => 'homepage/testimonials-slider.js',
+        'js_deps'       => [ 'fx_slick' ],
+        'category'      => 'fx-homepage-blocks',
+    ]
+);
+
+
+fx_register_block(
+    [
+        'name'          => 'homepage-half-floating-image-text',
+        'title'         => 'Homepage - Floating Double Image with Text',
+        'template'      => 'homepage/half-floating-image-text.php',
+        'description'   => '',
+        'css_deps'      => [ 'fx_contained_image_text' ],
+        'category'      => 'fx-homepage-blocks',
+    ]
+);
+
+fx_register_block(
+    [
+        'name'          => 'homepage-full-width-background-text',
+        'title'         => 'Homepage - Full Width Background with Text',
+        'template'      => 'homepage/full-width-background-text.php',
+        'description'   => '',
+        'css_deps'      => [ 'fx_full_width_image_text' ],
+        'category'      => 'fx-homepage-blocks',
+    ]
+);
+
+fx_register_block(
+    [
+        'name'          => 'homepage-post-to-display',
+        'title'         => 'Homepage - Posts To Display',
+        'template'      => 'homepage/post-to-display.php',
+        'description'   => '',
+        'css'           => 'homepage/cards.css',
+        'category'      => 'fx-homepage-blocks',
+    ]
+);
+
+fx_register_block(
+    [
+        'name'          => 'homepage-cta',
+        'title'         => 'Homepage - CTA',
+        'template'      => 'homepage/cta.php',
+        'description'   => '',
+        'css'           => 'homepage/cta.css',
+        'category'      => 'fx-homepage-blocks',
+    ]
+);
+
 // @todo — add additional homepage blocks below with the "fx-homepage-blocks" category
 
 

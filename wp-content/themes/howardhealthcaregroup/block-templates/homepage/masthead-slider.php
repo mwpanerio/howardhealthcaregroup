@@ -22,4 +22,30 @@
     <?php $skip_lazy = false;
     endwhile; ?>
 </section>
+<?php if(get_field('add_testimonial_slider')): ?>
+<?php 
+    $testimonials = get_field('testimonial_to_posts');
+    
+    if($testimonials):
+?>
+<section class="testimonials-block">
+    <div class="container">
+        <div class="testimonials-block__wrap">
+            <h3><span><i class="icon-small-quotes"></i> Client Testimonials</span></h3>
+            <div class="js-testimonials-block-slider fx-slider">
+                <?php
+                    foreach($testimonials as $testimonial):
+                ?>
+                <div class="testimonials-block-item fx-slide">
+                    <div class="testimonials-block__content">
+                        <?php echo get_field('testimonial_content', $testimonial); ?>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+</section>
+<?php endif; ?>
+<?php endif; ?>
 <?php endif; ?>

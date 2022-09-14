@@ -12,14 +12,6 @@
     color: var(--color-charcoal);
 }
 
-.bg-white {
-    background: var(--color-white);
-}
-
-.bg-gray {
-    background: var(--color-teal);
-}
-
 .example-btn {
     margin-top: 30px;
 }
@@ -117,7 +109,7 @@
 }
 
 .table-structure table tbody tr {
-    background-color: var(--color-teal);
+    background-color: var(--color-light-teal);
 }
 
 .table-structure table tbody tr:nth-child(odd) {
@@ -138,7 +130,7 @@
 
 .table-scroll {
     scrollbar-width: thin;
-    scrollbar-color: #007680 var(--color-teal);
+    scrollbar-color: var(--color-teal) var(--color-light-teal);
     border-radius: 30px;
     position: relative;
     overflow-x: auto;
