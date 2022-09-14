@@ -1,12 +1,12 @@
 {
-    "key": "group_60590472a6ff6",
-    "title": "[Block] Homepage - Masthead Slider",
+    "key": "group_6321e3d8de10a",
+    "title": "[Block] Homepage - Testimonials with Form",
     "fields": [
         {
-            "key": "field_6053743cdb7d4",
-            "label": "Slides",
-            "name": "slides",
-            "type": "repeater",
+            "key": "field_6321e3f06dbb9",
+            "label": "Testimonial Section",
+            "name": "testimonial_section",
+            "type": "group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,14 +15,10 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
             "layout": "block",
-            "button_label": "Add Slide",
             "sub_fields": [
                 {
-                    "key": "field_63213b54692f3",
+                    "key": "field_6321e3ff6dbba",
                     "label": "Subheading",
                     "name": "subheading",
                     "type": "text",
@@ -41,9 +37,9 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_6050d7d7bea49",
-                    "label": "Headline",
-                    "name": "headline",
+                    "key": "field_6321e4046dbbb",
+                    "label": "Title",
+                    "name": "title",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -60,25 +56,10 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_6050dd1facdaf",
-                    "label": "Button",
-                    "name": "button",
+                    "key": "field_6321e4096dbbc",
+                    "label": "Link",
+                    "name": "link",
                     "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array"
-                },
-                {
-                    "key": "field_6050dd2cacdb1",
-                    "label": "Background Image",
-                    "name": "background_image",
-                    "type": "image",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -87,24 +68,42 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "id",
-                    "preview_size": "medium",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_6321e41b6dbbd",
+                    "label": "Testimonial To Post",
+                    "name": "testimonial_to_post",
+                    "type": "relationship",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "testimonial"
+                    ],
+                    "taxonomy": "",
+                    "filters": [
+                        "search",
+                        "post_type",
+                        "taxonomy"
+                    ],
+                    "elements": "",
+                    "min": "",
+                    "max": "",
+                    "return_format": "id"
                 }
             ]
         },
         {
-            "key": "field_6321ce67859aa",
-            "label": "Add Testimonial Slider?",
-            "name": "add_testimonial_slider",
-            "type": "true_false",
+            "key": "field_6321e4706dbbe",
+            "label": "Form",
+            "name": "form",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -113,46 +112,11 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "default_value": 1,
-            "ui": 1,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_6321ce7b859ab",
-            "label": "Testimonial To Posts",
-            "name": "testimonial_to_posts",
-            "type": "relationship",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_6321ce67859aa",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [
-                "testimonial"
-            ],
-            "taxonomy": "",
-            "filters": [
-                "search",
-                "post_type",
-                "taxonomy"
-            ],
-            "elements": "",
-            "min": "",
-            "max": "",
-            "return_format": "id"
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -160,7 +124,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/homepage-masthead-slider"
+                "value": "acf\/homepage-testimonial-with-form"
             }
         ]
     ],
@@ -173,5 +137,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663160073
+    "modified": 1663165559
 }

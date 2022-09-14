@@ -173,6 +173,14 @@ img {
     opacity: 1;
 }
 
+.bg-white {
+    background: var(--color-white);
+}
+
+.bg-gray {
+    background: var(--color-light-teal);
+}
+
 
 /*
   - Please set up line-heights in ems
