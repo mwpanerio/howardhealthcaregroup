@@ -138,6 +138,7 @@ function fx_theme_styles() {
         [
             'handle'    => 'fx_wysiwyg',
             'src'       => $theme_url . '/assets/css/components/wysiwyg.css',
+            'enqueue'   => ( is_front_page() )
         ]
     );
     
@@ -215,6 +216,7 @@ function fx_theme_styles() {
         [
             'handle'        => 'fx_readmore',
             'src'           => $theme_url . '/assets/css/components/FxReadMore.css',
+            'enqueue'       => ( is_front_page() )
         ]
     );
 
@@ -352,6 +354,7 @@ function fx_theme_scripts() {
             'handle'        => 'fx_readmore',
             'src'           => $theme_url . '/assets/js/components/FxReadMore.js',
             'dependencies'  => [ 'jquery' ],
+            'enqueue'       => ( is_front_page() )
         ]
     );
     
