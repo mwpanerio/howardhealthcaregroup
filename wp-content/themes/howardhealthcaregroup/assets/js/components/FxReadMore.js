@@ -1,87 +1,26 @@
-// create instances for all FxReadMore elements
-( () => {
-	
-	document.addEventListener( 'DOMContentLoaded', () => {
-		document.querySelectorAll('.js-read-more').forEach( el => {
-			new FxReadMore( el )
-		})
-	})
 
 
+const readMoreBoxes = document.querySelectorAll('.read-more__box');
 
-	class FxReadMore {
-	
-		constructor( el ) {
+readMoreBoxes.forEach(item => {
 
-			// avoid rebinding if already applied
-			if( undefined !== el.fxReadMore ) {
-				return
-			}
+  const elBtn = item.querySelector('.js-read-more-expand'),
+	  elContent = item.querySelector('.js-read-more')
 
-			this.el = el
-			this.el.fxReadMore = this
+	if( null !== elBtn && null !== elContent ) {
 
-			this.setup()
+	  elBtn.addEventListener( 'click', () => {
+		const state = elContent.classList.contains('is-expanded')
+		if( state ) {
+		  elBtn.innerText = 'Read More'
+		  elContent.classList.remove('is-expanded')
+		  elBtn.classList.remove('is-expanded')
+		} else {
+		  elBtn.innerText = 'Read Less'
+		  elContent.classList.add('is-expanded')
+		  elBtn.classList.add('is-expanded')
 		}
-
-
-		setup() {
-
-			// try to find read more button
-			const sibling = this.el.nextElementSibling
-
-			if( null !== sibling && sibling.classList.contains('js-read-more-toggle') ) {
-				this.btn = sibling
-
-				// note initial line clamp for later usage
-				this.origLineClamp = parseInt( this.el.style.getPropertyValue('--readMoreLines') )
-
-				// tracking states for updating element
-				this.isExpanded = false
-
-				this.bind()
-			}
-		}
-	
-	
-		bind() {
-			this.btn.addEventListener( 'click', this.handleBtnClick.bind( this ) )
-		}
-	
-	
-		handleBtnClick( e ) {
-			if( this.isExpanded ) {
-				this.collapseBlock()
-			} else {
-				this.expandBlock()
-			}
-		}
-
-
-		collapseBlock() {
-			this.updateBlockState(
-				false,
-				this.origLineClamp,
-				'Read More'
-			)
-		}
-
-
-		expandBlock() {
-			this.updateBlockState(
-				true,
-				'unset',
-				'Read Less'
-			)
-		}
-
-
-		updateBlockState( expand, lineClamp, btnText ) {
-			this.isExpanded = expand
-
-			this.el.style.setProperty( '--readMoreLines', lineClamp )
-			this.btn.innerText = btnText
-		}
+	  })
 	}
+})
 
-}) ()

@@ -8,21 +8,100 @@
 \*------------------------------------*/
 
 /* if you are having issues with clamping in safari, see this fix: https://app.getguru.com/card/c48ay5ri/CSS-lineclamp-in-latest-Safari- */
-.read-more {
-	display: block;
+
+.read-more__content {
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
-	-webkit-line-clamp: var( --readMoreLines );
+	text-overflow: ellipsis;
 	overflow: hidden;
-	word-break: break-all;
+	position: relative;
 }
 
-.read-more--toggle,
-.read-more--cta {
-    margin-top: 1.2rem; /* Adjust to match site design */
+.read-more__wrapper {
+	display: inline;
 }
 
-/* fix - display: -webkit-box; prevents margins from collapsing */
-.read-more__content p {
-    margin-top: 0;
+.read-more__content {
+	-webkit-line-clamp: 9;
+}
+
+.read-more__content.is-expanded {
+	-webkit-line-clamp: inherit !important;
+}
+
+.image-text__read-more {
+	-webkit-line-clamp: 11;
+}
+
+.image-text__read-more.is-expanded {
+	-webkit-line-clamp: inherit !important;
+}
+
+.image-text__text .expand {
+	margin-bottom: 15px;
+}
+
+.expand {
+	margin-bottom: 0;
+	margin-top: 15px;
+	display: inline-block;
+	position: relative;
+	border: none;
+	font-size: 16px;
+	color: var(--color-teal);
+	font-weight: 700;
+	line-height: 1.2em;
+	padding-bottom: 0;
+	padding-right: 26px;
+	background: transparent;
+}
+
+.expand:hover {
+	color: var(--color-blue);
+	background: transparent;
+}
+
+.expand::before {
+    content: "\e901";
+    font-family: 'icomoon';
+    position: absolute;
+    right: 0;
+    top: 0px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.expand.is-expanded::before {
+    content: "\e910";
+}
+
+@media (min-width: 768px) {
+
+	.read-more__content {
+		-webkit-line-clamp: 10;
+	}
+
+	.image-text__read-more {
+		-webkit-line-clamp: 6;
+	}
+	
+	.image-text__read-more.is-expanded {
+		-webkit-line-clamp: inherit !important;
+	}
+
+}
+
+@media (min-width: 1200px) {
+	.read-more__content {
+		-webkit-line-clamp: 5;
+	}
+
+	.image-text__read-more {
+		-webkit-line-clamp: 6;
+	}
+	
+	.image-text__read-more.is-expanded {
+		-webkit-line-clamp: inherit !important;
+	}
+
 }

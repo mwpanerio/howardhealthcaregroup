@@ -1,0 +1,134 @@
+.cta {
+    background: linear-gradient(to right,  rgba(29,66,138,1) 0%,rgba(0,118,128,0.75) 41%,rgba(0,118,128,0.15) 100%);
+    color: var(--color-white);
+}
+
+.cta__content h5,
+.cta__content h2,
+.cta__content h3 {
+    color: var(--color-white);
+}
+
+.cta__content h5 br {
+    display: none;
+}
+
+.cta__info__wrap {
+    background: var(--color-white);
+    padding: 25px 45px 21px;
+    text-align: center;
+    max-width: 420px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.cta__info__wrap h4 {
+    font-size: 18px;
+    color: var(--color-teal);
+    font-family: 'Lato', sans-serif; 
+    font-weight: 700;
+    padding: 0 0 0;
+}
+
+.cta__info__wrap a {
+    font-size: 28px;
+    color: var(--color-teal);
+    font-family: 'Lato', sans-serif; 
+    font-weight: 700;
+    padding: 0 0;
+    background: transparent;
+}
+
+.cta__info__wrap a i {
+    vertical-align: middle;
+    padding: 0 2px 5px 0;
+}
+
+@media (min-width: 768px) {
+    .cta {
+        padding: 80px 0;
+    }
+
+    .cta__content h5 br {
+        display: inline-block;
+    }
+
+    .cta__content h5 span::before {
+        top: auto;
+        background: var(--color-white);
+    }
+}
+
+@media (min-width: 1200px) {
+    .cta {
+        padding: 70px 0 67px 0;
+    }
+
+    .cta__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .cta__content {
+        width: 575px;
+    }
+
+    .cta__info {
+        width: calc(100% - 575px);
+    }
+
+    .cta__info__wrap {
+        padding: 25px 45px 21px;
+        margin: 0 0 0 auto;
+    }
+
+    .cta__info__wrap:hover a {
+        color: var(--color-blue);
+    }
+
+}
+
+
+.cta__info-inner .btn {
+    margin-top: 19px;
+}
+
+.cta__info__form label,
+.cta__info__form label sup {
+    color: var(--color-white);
+}
+
+.cta--newsletter {
+    background: linear-gradient(to bottom,  rgba(29,66,138,1) 0%,rgba(0,118,128,0.75) 50%,rgba(0,118,128,0.15) 100%);
+}
+
+@media (min-width: 768px) {
+    .cta {
+        background: linear-gradient(to right,  rgba(29,66,138,1) 0%,rgba(0,118,128,0.75) 41%,rgba(0,118,128,0.15) 100%);
+    }
+
+    .cta__info-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cta__info-inner .btn {
+        margin-top: 0;
+        width: 140px;
+    }
+
+    .cta__info-inner input {
+        width: calc(100% - 174px);
+    }
+    
+}
+
+@media (min-width: 1366px) {
+    .cta__info-inner input {
+        width: calc(100% - 195px);
+    }
+    
+}

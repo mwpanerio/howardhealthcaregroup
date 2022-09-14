@@ -24,8 +24,8 @@ var FX = ( function( FX, $ ) {
         FX.ExternalLinks.init(); // Enable by default
 	})
 
-    $( () => {
-        FX.Menu.init();
+	$( () => {
+        FX.MobileMenu.init(); // Enable by default
 	})
 
     $( () => {
@@ -155,126 +155,24 @@ var FX = ( function( FX, $ ) {
 	 */
 	FX.MobileMenu = {
 		init() {
-			$('.nav-primary li.menu-item-has-children > a').after('<span class="sub-menu-toggle icon-arrow-down hidden-md-up"></span>');
+			$('.nav-primary li.menu-item-has-children > a').after('<span class="sub-menu-toggle icon-down-angle hidden-md-up"></span>');
 
-			$('.sub-menu-toggle' ).click( () => {
-				var $this = $(this),
-					$parent = $this.closest( 'li' ),
-					$wrap = $parent.find( '> .sub-menu' );
+			$('.sub-menu-toggle' ).on('click', function() {
+				const $this = $(this);
+				const $wrap = $this.next( '.sub-menu' );
 
-				$wrap.toggleClass('js-toggled');
-				$this.toggleClass('js-toggled');
+				$this.toggleClass('is-active');
+				$this.next('.sub-menu').stop().slideToggle();
 			});
+
+			$('.toggle-menu').on('click', function() {
+				const $this = $(this);
+
+				$this.toggleClass('is-active');
+				$('.nav-primary').stop().slideToggle();
+			})
 		}
 	};
-
-
-
-	/**
-	 * Ubermenu mobile menu toggle hack
-	 * @type {Object}
-	 */
-	FX.Menu = {
-		windowWidth: 		0,
-		$ubermenu: 			$('#ubermenu-nav-main-33'), // replace with ID of ubermenu element
-		$topLevelMenuItems: null,
-		$mobileMenuToggle: 	$('.ubermenu-responsive-toggle'),
-
-
-        init() {
-            this.setMenuClasses();
-			this.setSubMenuClasses();
-
-			this.$topLevelMenuItems = this.$ubermenu.children('.ubermenu-item-level-0');
-			this.bind();
-        },
-
-        setMenuClasses() {
-            let windowWidth = $( window ).innerWidth();
-
-            // iOS fires resize event on scroll - let's first make sure the window width actually changed
-            if ( windowWidth == this.windowWidth ) {
-                return;
-            }
-
-            this.windowWidth = windowWidth;
-
-            if ( this.windowWidth < 1025 ) {
-                $('.ubermenu-item-has-children').each( () => {
-                    $(this).removeClass('ubermenu-has-submenu-drop');
-                });
-
-            } else {
-                $('.ubermenu-item-has-children').each( () => {
-                    $(this).addClass('ubermenu-has-submenu-drop');
-                });
-            }
-        },
-
-		setSubMenuClasses() {
-			$('.ubermenu-item-has-children').each( () => {
-                $(this).children('a').each( () => {
-                    let $this = $(this);
-                    $this.children('.ubermenu-sub-indicator').clone().insertAfter( $this).addClass('submenu-toggle hidden-md-up');
-                    $this.children('.ubermenu-sub-indicator').addClass('hidden-sm-down');
-                });
-			});
-		},
-
-        bind() {
-			$(window).on( 'resize', this.setMenuClasses.bind(this) );
-
-			$('.submenu-toggle').on( 'touchstart click', this.toggleNextLevel );
-
-			this.$topLevelMenuItems.on( 'ubermenuopen', this.handleUbermenuOpen.bind( this ) )
-			this.$topLevelMenuItems.on( 'ubermenuclose', this.handleUbermenuClose.bind( this ) )
-
-			// when clicking to open/close mobile menu toggle
-			this.$mobileMenuToggle.on( 'ubermenutoggledopen', this.handleUbermenuOpen.bind( this ) )
-			this.$mobileMenuToggle.on( 'ubermenutoggledclose', this.handleUbermenuClose.bind( this ) )
-		},
-
-		handleUbermenuOpen( e ) {
-			const self = this,
-				$container = self.$ubermenu.closest('.desktop-menu')
-
-			$(document.body).addClass('menu-is-active')
-
-			$container.addClass('menu-is-active')
-			self.$mobileMenuToggle.addClass('menu-is-active')
-		},
-
-
-		handleUbermenuClose( e ) {
-			const self = this,
-				$container = self.$ubermenu.closest('.desktop-menu')
-
-			$(document.body).removeClass('menu-is-active')
-			$container.removeClass('menu-is-active')
-			self.$mobileMenuToggle.removeClass('menu-is-active')
-		},
-
-
-		/* handleResponsiveToggleClick( e ) {
-			const $btn = $(e.currentTarget),
-				$menu = $('.desktop-menu').find('.ubermenu-main')
-
-			$btn.toggleClass('menu-is-active', $menu.hasClass('ubermenu-responsive-collapse') )
-		}, */
-
-
-        toggleNextLevel( e ) {
-            let $this = $( this );
-            
-			e.preventDefault();
-			
-            $this.toggleClass('fa-angle-down').toggleClass('fa-times');
-            $this.parent().toggleClass('ubermenu-active');
-            if( $this.parent().hasClass('ubermenu-active') ) {
-                $this.parent().siblings('.ubermenu-active').removeClass('ubermenu-active').children('.submenu-toggle').addClass('fa-angle-down').removeClass('fa-times');
-            }
-        }
-	}
 
 
 

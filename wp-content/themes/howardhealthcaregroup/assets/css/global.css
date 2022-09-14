@@ -26,6 +26,14 @@
     BASE
 \*------------------------------------*/
 
+@media (min-width: 1200px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+}
+
 
 /**
  * Media
@@ -46,15 +54,16 @@
 .wp-caption.aligncenter {
     margin: 0;
     width: auto !important;
-    /* to overwrite inline widths */
 }
 
 img.alignright,
 .wp-caption.alignright,
 img.alignleft,
 .wp-caption.alignleft {
-    height: auto;
-    max-width: 50%;
+    height: 217px;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 4px;
 }
 
 img.alignnone,
@@ -74,14 +83,14 @@ img.aligncenter,
 
 img.alignright,
 .wp-caption.alignright {
-    float: right;
-    margin: 0 0 22px 30px;
+    float: none;
+    margin: 0 0 20px 0;
 }
 
 img.alignleft,
 .wp-caption.alignleft {
-    float: left;
-    margin: 0 30px 22px 0;
+    float: none;
+    margin: 0 0 20px 0;
 }
 
 img.aligncenter,
@@ -101,6 +110,54 @@ img.aligncenter,
     display: table-caption;
 }
 
+@media (min-width: 768px) {
+    img.alignright,
+    .wp-caption.alignright,
+    img.alignleft,
+    .wp-caption.alignleft {
+        height: 250px;
+        max-width: 47.5%;
+    }
+
+    img.alignright,
+    .wp-caption.alignright {
+        float: right;
+        margin: 0 0 9px 10px;
+    }
+
+    img.alignleft,
+    .wp-caption.alignleft {
+        float: left;
+        margin: 0 10px 10px 0;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    img.alignright,
+    .wp-caption.alignright,
+    img.alignleft,
+    .wp-caption.alignleft {
+        height: auto;
+        max-width: 38%;
+    }
+
+    img.alignright,
+    .wp-caption.alignright {
+        float: right;
+        margin: 4px 0 4px 10px;
+    }
+
+    img.alignleft,
+    .wp-caption.alignleft {
+        float: left;
+        margin: 0 10px 10px 0;
+    }
+
+}
+
+
+
 iframe,
 img {
     max-width: 100%;
@@ -117,57 +174,175 @@ img {
 }
 
 
-
-/**
-  * Typography
-  */
-
 /*
   - Please set up line-heights in ems
   - Set up typography styling based on styles found in .xd file under Assets > Character Styles
   */
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5 {
-    border-bottom: 1px solid #000;
+ 
+h1, 
+.h1,
+h2, 
+.h2,
+h3, 
+.h3,
+h4, 
+.h4,
+h5, 
+.h5,
+h6, 
+.h6 {
+    margin:0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
 }
 
-h1, .h1 {}
+h2, 
+.h2,
+h3, 
+.h3 {
+    color: #161E43;
+}
 
-h2, .h2 {}
+h1, 
+.h1 {
+    font-size: 32px;
+    line-height: 1.31em;
+}
 
-h3, .h3 {}
+h2, 
+.h2 {
+    font-size: 28px;
+    line-height: 1.35em;
+    padding-bottom: 20px;
+    position: relative;
+}
 
-h4, .h4 {}
+h3, 
+.h3 {
+    font-size: 24px;
+    line-height: 1.4em;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+h4, 
+.h4 {
+    font-size: 20px;
+    line-height: 1.5em;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+h5, 
+.h5 {
+    font-size: 16px;
+    line-height: 1.5em;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-blue);
+    font-family: 'Lato', sans-serif; 
+    margin-bottom: 5px;
+    position: relative;
+}
+
+h5 span, 
+.h5 span {
+    position: relative;
+}
+
+h5 span::before, 
+.h5 span::before,
+h5.center span::after, 
+.h5.center span::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 13px;
+    width: 24px;
+    height: 2px;
+    background: var(--color-blue);
+    opacity: 0;
+}
+
+h5 span::after, 
+.h5 span::after {
+    left: 0;
+}
+
+p {
+   margin:0;
+   padding: 0 0 20px; 
+   font-size: 16px;
+   line-height: 1.62em;
+   font-weight: normal;
+}
+
+p:last-child {
+    padding-bottom: 0;
+}
 
 @media (min-width: 768px) {
-    h1, .h1 {}
+    h1, 
+    .h1 {
+        font-size: 42px;
+    }
 
-    h2, .h2 {}
+    h2, 
+    .h2 {
+        font-size: 38px;
+    }
+  
+    h3, 
+    .h3 {
+        font-size: 28px;
+    }
 
-    h3, .h3 {}
+    h4, 
+    .h4,
+    h5, 
+    .h5 {
+        font-size: 18px;
+    }
 
-    h4, .h4 {}
+    h5.center, 
+    .h5.center {
+        text-align: center;
+    }
+
+    h5 span, 
+    .h5 span {
+        display: inline-block;
+        padding-right: 40px;
+    }
+
+    h5.center span, 
+    .h5.center span {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    h5 span::before, 
+    .h5 span::before,
+    h5.center span::after, 
+    .h5.center span::after {
+        opacity: 1;
+    }
+
 }
 
-@media (min-width: 1025px) {
-    h1, .h1 {}
 
-    h2, .h2 {}
 
-    h3, .h3 {}
 
-    h4, .h4 {}
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
-
-p, ul, ol {}
 
 .page-content ul,
 .page-content ol {
-    /* fix for bulleted lists not wrapping around images correctly in Wordpress */
     width: auto;
     overflow: hidden;
     padding-left: 15px;
@@ -194,19 +369,82 @@ ol li:before {
 }
 
 ul li {
+    margin: 0 0 15px;
+    padding: 0 0 0 25px; 
+    font-size: 16px;
+    line-height: 1.62em;
+    font-weight: 400;
+    position: relative;
 }
 
 ul li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #171717;
 }
-
-hr {}
 
 a {
     word-break: break-word;
-    /* force link text to overflow when too long for container */
+    text-decoration: none;
+    color: var(--color-teal);
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(to bottom,  rgba(0,118,128,1) 0%,rgba(0,118,128,1) 100%);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 1px 1px;
+    transition: all ease-in-out 0.3s; 
 }
 
-a:hover {}
+blockquote {
+    margin:0;
+    padding: 28px 25px; 
+    font-size: 16px;
+    line-height: 1.62em;
+    font-weight: normal;
+    position: relative;
+    box-shadow: 0 0 16px rgba(29,66,138,0.16);
+    border-radius: 4px;
+    max-width: 872px;
+    margin: 10px auto 20px;
+}
+
+blockquote i {
+    font-size: 30px;
+    position: relative;
+    color: var(--color-teal);
+    background: var(--color-white);
+    display: block;
+    margin-bottom: 5px;
+}
+
+blockquote i::after {
+    content: "";
+    position: absolute;
+    right: -24px;
+    top: 15px;
+    width: calc(100% - 26px);
+    height: 2px;
+    background: rgba(29,66,138,0.15);
+}
+
+
+
+
+@media (min-width: 1200px) {
+
+    a:hover {
+      background-size: 100% 100%;
+      color: var(--color-white);
+      border-radius: 3px;
+    }
+
+}
 
 
 
@@ -220,8 +458,6 @@ a:hover {}
 /**
  * Utility Margin/Padding Classes
  *
- * TODO: Update the --margins variable in custom-properties.css to match prototypes margins 
- */
 
 /* Used on outer-most section container so section margins collapse */
 .section-margins {
@@ -265,13 +501,52 @@ a:hover {}
  * Buttons
  */
 
-.btn {}
+ .btn {
+    display: inline-block;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.34em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--color-white);
+    padding: 13px 29px 13px 29px;
+    border-radius: 4px;
+    border: 2px solid var(--color-teal);
+    position: relative;
+    transition: all ease-in-out 0.3s;
+    background: var(--color-teal);
+    z-index: 1;
+    text-transform: capitalize;
+}
 
-.btn:hover {}
+.btn-secondary {
+    background: var(--color-blue);
+    border-color: var(--color-blue);
+}
 
-.btn-secondary {}
+.btn-white {
+    background: var(--color-white);
+    color: var(--color-teal);
+    border: 2px solid var(--color-white);
+}
 
-.btn-secondary:hover {}
+.btn-tertiary {
+    background: transparent;
+    border: none;
+    color: var(--color-teal);
+    border-radius: 0;
+    padding: 0 38px 0 0;
+}
+
+.btn-tertiary:after {
+    content: "\e90c";
+    font-family: 'icomoon';
+    position: absolute;
+    right: 0;
+    top: 1px;
+    font-size: 21px;
+}
 
 .btn-block {
     display: block;
@@ -279,16 +554,60 @@ a:hover {}
 }
 
 .btn+.btn {
-    margin-top: 5px;
-    /* Add margin-top when 2 buttons are next to each other */
+    margin-top: 20px;
+}
+
+
+@keyframes shake {
+    0%, 100% {transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-5px);}
+    20%, 40%, 60%, 80% {transform: translateX(5px);}
 }
 
 @media (min-width: 600px) {
 
     .btn+.btn {
         margin-top: 0;
-        margin-left: 5px;
+        margin-left: 20px;
     }
+
+}
+
+@media (min-width: 1200px) {
+    .btn+.btn {
+        margin-top: 0;
+        margin-left: 50px;
+    }
+
+    .btn:hover,
+    .btn-primary:hover {
+        color: var(--color-teal);
+        border: 2px solid var(--color-teal);
+        background: transparent;
+    }
+
+    .btn-secondary:hover {
+        color: var(--color-blue);
+        border: 2px solid var(--color-blue);
+        background: transparent;
+    }
+
+    .btn-tertiary:hover {
+        background: transparent;
+        border: none;
+        color: var(--color-teal);
+    }
+
+    .btn-tertiary:hover:after {
+        animation: shake 5s ease infinite;
+    }
+
+    .btn-white:hover {
+        background: none;
+        border-color: var(--color-white);
+        color: var(--color-white);
+    }
+
 
 }
 
@@ -298,7 +617,91 @@ a:hover {}
  * Icons
  */
 
-/* add icon code here */
+ @font-face {
+    font-family: 'icomoon';
+    src:  url('/wp-content/themes/howardhealthcaregroup/assets/icons/icomoon.eot?61wj9a');
+    src:  url('/wp-content/themes/howardhealthcaregroup/assets/icons/icomoon.eot?61wj9a#iefix') format('embedded-opentype'),
+      url('/wp-content/themes/howardhealthcaregroup/assets/icons/icomoon.ttf?61wj9a') format('truetype'),
+      url('/wp-content/themes/howardhealthcaregroup/assets/icons/icomoon.woff?61wj9a') format('woff'),
+      url('/wp-content/themes/howardhealthcaregroup/assets/icons/icomoon.svg?61wj9a#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-down-angle:before {
+    content: "\e900";
+  }
+  .icon-down-arrow:before {
+    content: "\e901";
+  }
+  .icon-error:before {
+    content: "\e902";
+  }
+  .icon-fax:before {
+    content: "\e903";
+  }
+  .icon-house:before {
+    content: "\e904";
+  }
+  .icon-large-quotes:before {
+    content: "\e905";
+  }
+  .icon-left-angle:before {
+    content: "\e906";
+  }
+  .icon-left-arrow:before {
+    content: "\e907";
+  }
+  .icon-location:before {
+    content: "\e908";
+  }
+  .icon-phone:before {
+    content: "\e909";
+  }
+  .icon-responsive-menu:before {
+    content: "\e90a";
+  }
+  .icon-right-angle:before {
+    content: "\e90b";
+  }
+  .icon-right-arrow:before {
+    content: "\e90c";
+  }
+  .icon-search:before {
+    content: "\e90d";
+  }
+  .icon-small-quotes:before {
+    content: "\e90e";
+  }
+  .icon-up-angle:before {
+    content: "\e90f";
+  }
+  .icon-up-arrow:before {
+    content: "\e910";
+  }
+  .icon-x-close:before {
+    content: "\e911";
+  }
+  .icon-ctrl:before {
+    content: "\ea50";
+  }
+  
 
 
 
@@ -306,12 +709,42 @@ a:hover {}
  * Forms
  */
 
-label {}
+.form-col {
+    margin-bottom: 24px;
+    position: relative;
+}
 
-select {}
+label {
+    display: block;
+    text-align: left;
+    color: var(--color-charcoal);
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+    padding-bottom: 9px;
+    line-height: 1.2em;
+}
 
-textarea {}
+label sup {
+    color: var(--color-teal);
+    font-size: 17px;
+    top: 0;
+}
 
+textarea {
+    resize: none;
+    width: 100%;
+    background-color: #F4F9FA;
+    padding: 15px 15px;
+    height: 116px;
+    color: var(--color-charcoal);
+    font-size: 16px;
+    font-weight: 400;
+    transition: all ease-in-out 0.1s;
+    border: 1px solid #D9EAEC;
+    border-radius: 4px;
+    font-family: 'Lato', sans-serif;
+}
 /* Removes default webkit form styling */
 input:not([type="radio"]):not([type="checkbox"]),
 button,
@@ -326,9 +759,7 @@ input:focus,
 textarea:focus,
 select:focus {
     outline: none;
-    /* Removes blue border on focus */
-    border: 1px solid #ccc;
-    /* TODO: Please add a branded border for active and focus */
+    border: 2px solid var(--color-teal);
 }
 
 /* default text input style */
@@ -344,7 +775,19 @@ select:focus {
 [type="tel"],
 [type="url"],
 [type="week"],
-[type="date"] {}
+[type="date"] {
+    width: 100%;
+    background-color: #F4F9FA;
+    padding: 0 15px;
+    height: 49px;
+    color: var(--color-charcoal);
+    font-size: 16px;
+    font-weight: 400;
+    transition: all ease-in-out 0.1s;
+    border: 1px solid #D9EAEC;
+    border-radius: 4px;
+    font-family: 'Lato', sans-serif;
+}
 
 /* Removes inconsistent padding from Firefox buttons */
 button::-moz-focus-inner,
@@ -353,6 +796,42 @@ button::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
     border: none;
     padding: 0;
+}
+
+[type="text"]:focus,
+[type="date"]:focus,
+[type="datetime"]:focus,
+[type="datetime-local"]:focus,
+[type="email"]:focus,
+[type="month"]:focus,
+[type="number"]:focus,
+[type="password"]:focus,
+[type="search"]:focus,
+[type="tel"]:focus,
+[type="url"]:focus,
+[type="week"]:focus,
+[type="date"]:focus,
+textarea:focus {
+    outline: none;
+    border: 2px solid var(--color-teal);
+}
+
+[type="text"]::placeholder,
+[type="date"]::placeholder,
+[type="datetime"]::placeholder,
+[type="datetime-local"]::placeholder,
+[type="email"]::placeholder,
+[type="month"]::placeholder,
+[type="number"]::placeholder,
+[type="password"]::placeholder,
+[type="search"]::placeholder,
+[type="tel"]::placeholder,
+[type="url"]::placeholder,
+[type="week"]::placeholder,
+[type="date"]::placeholder,
+textarea::placeholder {
+    color: var(--color-charcoal);
+    opacity: 0.6;
 }
 
 
