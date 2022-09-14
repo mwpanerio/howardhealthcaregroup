@@ -24,6 +24,10 @@ var FX = ( function( FX, $ ) {
         FX.ExternalLinks.init(); // Enable by default
 	})
 
+	$( () => {
+        FX.MobileMenu.init(); // Enable by default
+	})
+
     $( () => {
         // TODO: Add Modules needed for build. Remove unused modules
         // NOTE: Code that is specific to one page or block should not be added in global.js. This file is reserved for javascript that must load on each page.
@@ -153,14 +157,20 @@ var FX = ( function( FX, $ ) {
 		init() {
 			$('.nav-primary li.menu-item-has-children > a').after('<span class="sub-menu-toggle icon-down-angle hidden-md-up"></span>');
 
-			$('.sub-menu-toggle' ).click( () => {
-				var $this = $(this),
-					$parent = $this.closest( 'li' ),
-					$wrap = $parent.find( '> .sub-menu' );
+			$('.sub-menu-toggle' ).on('click', function() {
+				const $this = $(this);
+				const $wrap = $this.next( '.sub-menu' );
 
-				$wrap.toggleClass('js-toggled');
-				$this.toggleClass('js-toggled');
+				$this.toggleClass('is-active');
+				$this.next('.sub-menu').stop().slideToggle();
 			});
+
+			$('.toggle-menu').on('click', function() {
+				const $this = $(this);
+
+				$this.toggleClass('is-active');
+				$('.nav-primary').stop().slideToggle();
+			})
 		}
 	};
 
