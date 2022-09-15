@@ -303,6 +303,10 @@
     z-index: 1;
 }
 
+.form-block label + br {
+    display: none;
+}
+
 .form-col .btn {
     margin-top: 15px;
 }
