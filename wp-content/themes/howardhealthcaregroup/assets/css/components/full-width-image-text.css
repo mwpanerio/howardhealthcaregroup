@@ -100,6 +100,16 @@
     background: var(--color-blue); 
 }
 
+.full-width-image-white-overlay:before {
+    opacity: .30;
+    background: var(--color-white); 
+}
+
+.full-width-image-black-overlay:before {
+    opacity: .75;
+    background: var(--color-black); 
+}
+
 
 /* Full-Width Image + Text - Text Box Overlay */
 .full-width-image-text--box-overlay .full-width-image-text__content {

@@ -151,6 +151,15 @@
     color: var(--color-charcoal);
     position: relative;
     margin: 17px 0;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out,
+                transform 0.6s ease-in-out;
+}
+
+.slick-active .testimonials-content {
+    transform: scale(1);
+    opacity: 1;
 }
 
 .testimonials-content h4 {

@@ -132,3 +132,29 @@
     }
     
 }
+
+.cta--newsletter .cta__info-inner {
+    position: relative;
+    align-items: flex-start;
+}
+
+.cta--newsletter .cta__info-inner input:not([type=submit]) {
+    width: 100%;
+    height: 54px;
+}
+
+.cta--newsletter .wpcf7-form-control-wrap {
+    padding-right: 20px;
+    width: 100%;
+}
+
+.cta--newsletter .wpcf7-not-valid-tip {
+    text-align: left;
+}
+
+.cta--newsletter .wpcf7-spinner {
+    margin: 0;
+    position: absolute;
+    right: -34px;
+    top: 14px;
+}

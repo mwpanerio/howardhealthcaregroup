@@ -70,7 +70,7 @@ fx_register_block(
     [
         'name'          => 'wysiwyg',
         'title'         => 'WYSIWYG',
-        'template'      => 'general/wysiwyg.php',
+        'template'      => 'innerpage/wysiwyg.php',
         'description'   => 'A basic "What you see is what you get" editor.',
         'css_deps'      => [ 'fx_wysiwyg' ],
         'post_types'    => [],
@@ -262,7 +262,105 @@ fx_add_block_category( 'FX Innerpage Blocks', 'fx-innerpage-blocks' );
 
 // @todo — add additional innerpage blocks below with the "fx-innerpage-blocks" category
 
+fx_register_block(
+    [
+        'name'          => 'innerpage-cta-with-form',
+        'title'         => 'Innerpage - CTA with Form',
+        'template'      => 'innerpage/cta-with-form.php',
+        'description'   => '',
+        'css_deps'      => ['fx_full_width_image_text'],
+        'category'      => 'fx-innerpage-blocks',
+    ]
+);
 
+fx_register_block(
+    [
+        'name'          => 'innerpage-image-buttons',
+        'title'         => 'Innerpage - Image Buttons',
+        'template'      => 'innerpage/image-buttons.php',
+        'description'   => '',
+        'css'           => 'innerpage/image-buttons.css',
+        'category'      => 'fx-innerpage-blocks',
+    ]
+);
 
+fx_register_block(
+    [
+        'name'          => 'innerpage-icon-buttons',
+        'title'         => 'Innerpage - Icon Buttons',
+        'template'      => 'innerpage/icon-buttons.php',
+        'description'   => '',
+        'css'           => 'innerpage/card-icon.css',
+        'category'      => 'fx-innerpage-blocks',
+    ]
+);
 
+fx_register_block(
+    [
+        'name'          => 'innerpage-half-image-text',
+        'title'         => 'Innerpage - Half Image / Half Text',
+        'template'      => 'innerpage/half-image-text.php',
+        'description'   => '',
+        'css_deps'      => ['fx_contained_image_text'],
+        'category'      => 'fx-innerpage-blocks',
+    ]
+);
 
+fx_register_block(
+    [
+        'name'          => 'innerpage-full-width-background-image-with-text',
+        'title'         => 'Innerpage - Full with Background Overlay with Text',
+        'template'      => 'innerpage/full-width-background-image-with-text.php',
+        'description'   => '',
+        'css_deps'      => ['fx_full_width_image_text'],
+        'category'      => 'fx-innerpage-blocks',
+    ]
+);
+
+fx_register_block(
+    [
+        'name'          => 'innerpage-accordion',
+        'title'         => 'Innerpage - Accordion',
+        'template'      => 'innerpage/accordion.php',
+        'description'   => '',
+        'css_deps'      => ['fx_accordion'],
+        'js_deps'      => ['fx_accordion'],
+        'category'      => 'fx-innerpage-blocks',
+    ]
+);
+
+fx_register_block(
+    [
+        'name'          => 'innerpage-testimonials',
+        'title'         => 'Innerpage - Testimonials',
+        'template'      => 'innerpage/testimonials.php',
+        'description'   => '',
+        'css'           => 'innerpage/testimonials.css',
+        'css_deps'      => [ 'fx_slick' ],
+        'js'            => 'homepage/testimonials-slider.js',
+        'js_deps'       => [ 'fx_slick' ],
+        'category'      => 'fx-innerpage-blocks',
+    ]
+);
+
+fx_register_block(
+    [
+        'name'          => 'innerpage-cta-call-us-button',
+        'title'         => 'Innerpage - CTA with Call Us Button',
+        'template'      => 'innerpage/cta-call-us-button.php',
+        'description'   => '',
+        'css'           => 'homepage/cta.css',
+        'category'      => 'fx-innerpage-blocks',
+    ]
+);
+
+fx_register_block(
+    [
+        'name'          => 'innerpage-cta-with-newsletter-signup',
+        'title'         => 'Innerpage - CTA with Newsletter Signup',
+        'template'      => 'innerpage/cta-with-newsletter-signup.php',
+        'description'   => '',
+        'css'           => 'homepage/cta.css',
+        'category'      => 'fx-innerpage-blocks',
+    ]
+);

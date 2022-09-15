@@ -177,8 +177,27 @@ img {
     background: var(--color-white);
 }
 
-.bg-gray {
+.bg-gray,
+.bg-light-teal {
     background: var(--color-light-teal);
+}
+
+.bg-teal {
+    background-color: var(--color-teal);
+}
+
+.bg-teal h2,
+.bg-teal h3,
+.bg-teal h4,
+.bg-teal h5,
+.bg-teal h6,
+.bg-teal p,
+.bg-teal a {
+    color: var(--color-white);
+}
+
+.bg-teal h5 span::before, .bg-teal .h5 span::before, .bg-teal h5.center span::after, .bg-teal .h5.center span::after {
+    background-color: var(--color-white);
 }
 
 
