@@ -13,7 +13,11 @@
                     <div class="masthead__content__wrap">
                         <h5><span> <?php the_sub_field( 'subheading' ); ?> </span></h5>
                         <h2 class="masthead-slide__title h1"><?php the_sub_field( 'headline' ); ?></h2>
-                        <a href="#" class="btn btn-white"><i class="icon-phone"></i> Call Us Now!</a>
+                        <?php if($button = get_sub_field('button')): ?>
+                            <a href="<?php echo $button['url']; ?>" class="btn btn-white"<?php echo $button['target'] ? ' target="' . $button['target'] . '"' : ''; ?>>
+                                <i class="icon-phone"></i> <?php echo $button['title']; ?>
+                            </a>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

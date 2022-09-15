@@ -24,6 +24,20 @@
     padding-top: 50px;
 }
 
+.wysiwyg__sidebar .row {
+    margin: 0;
+}
+
+.wysiwyg__sidebar .row > * {
+    width: 100%;
+    padding: 0;
+}
+
+.wysiwyg__sidebar .btn {
+    display: block;
+    width: 100%;
+}
+
 .wysiwyg__sidebar__column {
     background: var(--color-white);
     box-shadow: 0 0 24px rgba(29,66,138,0.16);
