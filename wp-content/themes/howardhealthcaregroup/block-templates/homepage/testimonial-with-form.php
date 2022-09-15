@@ -38,51 +38,9 @@
             <div class="col-lg-6">
                 <div class="form-block">
                     <div class="form-block__top-content text-center">
-                        <h3>Get in Touch</h3>
+                        <h3><?php echo get_field('form_title'); ?></h3>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="form-col">
-                                <label>First Name <sup>*</sup></label>
-                                <input type="text" placeholder="First Name">
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-col">
-                                <label>Last Name <sup>*</sup></label>
-                                <input type="text" placeholder="Last Name">
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-col">
-                                <label>Work Phone <sup>*</sup></label>
-                                <input type="tel" placeholder="###-###-####">
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-col">
-                                <label>Work Email <sup>*</sup></label>
-                                <input type="text" placeholder="example@domain.com">
-                            </div>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="form-col">
-                                <label>Practice Name  <sup>*</sup></label>
-                                <input type="text" placeholder="Practice Name">
-                            </div>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="form-col">
-                                <label>Your Message <sup>*</sup></label>
-                                <textarea placeholder="Enter your message here…"></textarea>
-                            </div>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="form-col text-center">
-                                <button class="btn btn-primary">Get in Touch With Team</button>
-                            </div>
-                        </div>
-                    </div>
+                    <?php echo apply_shortcodes(get_field('form')); ?>
                 </div>
             </div>
         </div>
