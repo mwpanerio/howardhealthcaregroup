@@ -30,7 +30,7 @@
     background: #f5f5f5;
     padding: 10px 20px;
     text-decoration: none;
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-border);
     border-radius: 4px;
     width: 100%;
     text-align: left;
@@ -58,15 +58,16 @@
 
 .tab-accordion__tab:focus:not(:focus-visible),
 .tab-accordion__panel__toggle:focus:not(:focus-visible) {
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-white);
 }
 
 .tab-accordion__panel__content {
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-border);
     border-top: 0;
     overflow: hidden;
+    background-color: var(--color-white);
 }
 
 .tab-accordion {
@@ -84,7 +85,7 @@
         border-radius: 4px;
         border-top-right-radius: 0;
         border-top-left-radius: 0;
-        border: 1px solid #ddd;
+        border: 1px solid var(--color-border);
         padding: 30px;
     }
 

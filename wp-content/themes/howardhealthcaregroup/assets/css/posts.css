@@ -497,6 +497,18 @@ progress::-webkit-progress-value {
 /* Search Results */
 .search-result {
     text-decoration: none;
+    background: none;
+    display: block;
+}
+
+.search-result:not(:last-child) {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #DCE2ED;
+}
+
+.search-result:hover {
+    color: var(--color-teal);
 }
 
 .search-result__title {
@@ -507,3 +519,17 @@ progress::-webkit-progress-value {
     margin-bottom: 20px;
 }
 
+@media (min-width: 1200px) {
+    .search-result {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.search-result__img-container {
+    margin-right: 20px;
+}
+
+.search-result__content {
+    flex: 1;
+}
