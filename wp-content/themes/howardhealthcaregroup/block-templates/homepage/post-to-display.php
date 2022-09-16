@@ -26,7 +26,21 @@
                                 <div class="card__details">
                                     <h4 class="card__title"><?php echo get_the_title($post); ?></h4>
                                     <div class="card__description">
-                                        <p>In late 2020, the No Surprises Act was enacted into law. The No Surprises Act changes the landscape for out-of- […] </p>
+                                        <?php 
+                                        
+                                        $blocks = parse_blocks( get_post_field('post_content', $post) );
+                                        $excerpt = '';
+
+                                        foreach ( $blocks as $block ) {
+                                        if ( 'acf/wysiwyg' === $block['blockName'] ) {
+                                                if(isset($block["attrs"]["data"]["content"])) {
+                                                    $excerpt = strip_tags(trim($block["attrs"]["data"]["content"]));
+                                                }
+                                                break;
+                                            }
+                                        }
+                                        ?>
+                                        <p><?php echo $excerpt; ?></p>
                                     </div>
                                 </div>
                             </div>

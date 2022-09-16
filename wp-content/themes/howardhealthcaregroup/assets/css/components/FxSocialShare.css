@@ -12,15 +12,31 @@
 /* CSS Generated from https://sharingbuttons.io/ */
 
 .social-share-row {
-    margin: 0;
+    margin: 20px 0 0;
     padding: 0 !important;
     /* get rid of default <ul> padding */
     list-style: none !important;
     /* get rid of list bullets */
+    text-align: center;
+}
+
+@media (min-width: 1200px) {
+    .social-share-row {
+        text-align: left;
+    }
 }
 
 .social-share-row__item {
     display: inline-block;
+    padding-left: 0;
+}
+
+.social-share-row__item:not(:last-child) {
+    margin-right: 20px;
+}
+
+.social-share-row__item:before {
+    display: none;
 }
 
 .resp-sharing-button__link,

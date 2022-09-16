@@ -44,6 +44,10 @@
 
 .card__description p {
     color: var(--color-charcoal);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
 }
 
 .card__bottom {
