@@ -12,32 +12,38 @@
 	$excerpt 	= wp_trim_words( get_the_excerpt(), 20, ' &hellip;' );
 ?>
 
-<div class="col-xxs-12 col-xs-6 col-md-4">
+<?php $blocks = parse_blocks( $post->post_content );
+
+	foreach ( $blocks as $block ) {
+	if ( 'acf/wysiwyg' === $block['blockName'] ) {
+			if(isset($block["attrs"]["data"]["content"])) {
+				$excerpt = strip_tags(trim($block["attrs"]["data"]["content"]));
+			}
+			break;
+		}
+	}
+
+?>
+
+<div class="col-xxs-12 col-xs-12 col-md-12">
 	<article class="blog-post__item">
-
-		<?php if( !empty( $img_tag ) ): ?>
-			<a class="blog-post__img-container show" href="<?php echo esc_url( $permalink ); ?>">
-				<?php echo $img_tag; ?>
-			</a>
-		<?php endif; ?>
-
-		<div class="blog-post__meta">	
-			<?php if( !empty( $terms ) ): ?>
-				<div class="blog-post__tags">
-					<?php foreach( $terms as $term ): ?>
-						<a class="blog-post__tag" href="<?php echo esc_url( get_term_link( $term ) ); ?>"><?php echo $term->name; ?></a>
-					<?php endforeach; ?>
+		<article class="blog-post__card">
+			<a href="<?php echo esc_url( $permalink ); ?>" class="blog-post__card__link">
+				<div class="blog-post__card__upper">
+					<span class="blog-post__date hidden-md-down">
+						<span><?php echo get_the_date('j'); ?></span>
+						<span><?php echo get_the_date('M Y'); ?></span>
+					</span>
+					<span class="blog-post__date hidden-lg">
+						<span><?php echo get_the_date('F j, Y'); ?></span>
+					</span>
 				</div>
-			<?php endif; ?>
-
-			<h3 class="blog-post__title">
-				<a class="blog-post__title__link" href="<?php echo esc_url( $permalink ); ?>"><?php the_title(); ?></a>
-			</h3>
-
-			<div class="blog-post__excerpt push-bottom"><?php echo $excerpt; ?></div>
-
-			<a class="blog-post__link btn-tertiary" href="<?php echo esc_url( $permalink ); ?>">Read More</a>
-		</div>
-		
+				<h3 class="blog-post__title"><?php the_title(); ?></h3>
+				<div class="blog-post__description">
+					<p><?php echo $excerpt; ?></p>
+				</div>
+				<span class="btn btn-tertiary">Continue Reading</span>
+			</a>
+		</article>
 	</article>
 </div>

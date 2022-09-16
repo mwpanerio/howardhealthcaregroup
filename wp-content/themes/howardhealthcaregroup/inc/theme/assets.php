@@ -173,7 +173,7 @@ function fx_theme_styles() {
             'handle'        => 'fx_choices_custom',
             'src'           => $theme_url . '/assets/css/components/choices.css',
             'dependencies'  => [ 'fx_choices_plugin' ],
-            // 'enqueue'       => is_archive(), // TODO uncomment if categories in sidebar will use drop-downs. Remove otherwise.
+            'enqueue'       => ( is_archive() || is_singular() || is_home() ),
         ]
     );
     
@@ -325,7 +325,7 @@ function fx_theme_scripts() {
             'src'           => $theme_url . '/assets/js/components/FxChoices.js',
             'dependencies'  => [ 'fx_choices_plugin' ],
             'defer'         => true,
-            // 'enqueue'       => ( is_archive() || is_home() ), // todo — uncomment and add conditions for dropdowns, etc
+            'enqueue'       => ( is_archive() || is_singular() || is_home() ),
         ]
     );     
     

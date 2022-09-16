@@ -2,7 +2,9 @@
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<section class="blog-single-container section-margins">
+<?php get_template_part('partials/masthead'); ?>
+
+<section class="blog-single-container bg-gray section-padding">
     <div class="container">
         <div class="row">
             <div class="col-md-8">
@@ -24,7 +26,7 @@
 
                 <?php get_template_part( 'partials/social-share' ); ?>
             </div>
-            <div class="col-md-3 col-md-offset-1">
+            <div class="col-md-4">
                 <?php get_sidebar(); ?>
             </div>
         </div>  
