@@ -13,7 +13,7 @@
                 <div class="contact-details">
                     <div class="contact-top-content">
                         <?php if($subheading): ?>
-                            <h5 class="center"><span><?php echo $subheading; ?></span></h5>
+                            <h5><span><?php echo $subheading; ?></span></h5>
                         <?php endif; ?>
                         <?php if($title): ?>
                             <h2><?php echo $title; ?></h2>
