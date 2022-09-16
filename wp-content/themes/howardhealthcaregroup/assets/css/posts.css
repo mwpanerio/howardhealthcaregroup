@@ -267,6 +267,21 @@
     height: 32px;
 }
 
+.sidebar-search form {
+    position: relative;
+}
+
+.sidebar-search [type=submit] {
+    width: 49px;
+    height: 49px;
+    position: absolute;
+    right: 0;
+    background-color: transparent;
+    border: 0;
+    color: var(--color-teal);
+    opacity: 1;
+}
+
 /**
 * FX Load More
 */
