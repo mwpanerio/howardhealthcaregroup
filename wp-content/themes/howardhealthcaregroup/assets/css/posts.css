@@ -497,6 +497,18 @@ progress::-webkit-progress-value {
 /* Search Results */
 .search-result {
     text-decoration: none;
+    background: none;
+    display: block;
+}
+
+.search-result:not(:last-child) {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #DCE2ED;
+}
+
+.search-result:hover {
+    color: var(--color-teal);
 }
 
 .search-result__title {
