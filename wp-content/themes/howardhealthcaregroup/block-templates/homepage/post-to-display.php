@@ -28,7 +28,8 @@
                                     <div class="card__description">
                                         <?php 
                                         
-                                        $blocks = parse_blocks( get_post_field('post_content', $post) );
+                                        $content_post = get_post($post);
+                                        $blocks = parse_blocks( $content_post->post_content );
                                         $excerpt = '';
 
                                         foreach ( $blocks as $block ) {
