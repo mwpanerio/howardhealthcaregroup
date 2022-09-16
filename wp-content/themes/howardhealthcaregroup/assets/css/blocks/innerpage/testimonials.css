@@ -150,7 +150,10 @@
     padding: 60px 88px 45px 27px;
     color: var(--color-charcoal);
     position: relative;
-    margin: 17px 0;
+    margin: 17px 0;   
+    height: 250px;
+    display: flex;
+    flex-direction: column;
 }
 
 .testimonials-content h4 {
@@ -161,6 +164,7 @@
     color: var(--color-teal);
     font-weight: 400;
     font-family: 'Lato', sans-serif;
+    margin-top: auto;
 }
 
 .testimonials-content h4 span {

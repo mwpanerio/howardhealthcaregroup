@@ -20,6 +20,14 @@
     max-width: 420px;
     border-radius: 4px;
     margin-top: 10px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+@media (min-width: 1200px) {
+    .cta__info__wrap:hover {
+        transform: scale(1.05);
+    }
 }
 
 .cta__info__wrap h4 {
@@ -37,11 +45,15 @@
     font-weight: 700;
     padding: 0 0;
     background: transparent;
+    display: inline-flex;
+    align-items: center;
 }
 
 .cta__info__wrap a i {
     vertical-align: middle;
-    padding: 0 2px 5px 0;
+    padding: 0 4px 0 0;
+    position: relative;
+    top: 2px;
 }
 
 @media (min-width: 768px) {
