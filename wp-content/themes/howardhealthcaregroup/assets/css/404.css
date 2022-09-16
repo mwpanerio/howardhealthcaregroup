@@ -71,3 +71,8 @@
         font-size: 24px;
     }
 }
+
+.link-image img {
+    width: 100%;
+    height: auto;
+}
