@@ -25,6 +25,7 @@
     --color-white: #ffffff;
     --color-black: var(--color-charcoal);
 
+    --color-border: #D9EAEC;
     --color-headings: #161E43;
     --color-text: var(--color-charcoal);
 }

@@ -14,12 +14,19 @@
         );
     ?>
     <?php if ( $featured_post_query->have_posts() ) : while ( $featured_post_query->have_posts() ) : $featured_post_query->the_post(); ?>
-        <!-- featured post HTML goes here -->
+        <div class="featured-post">
+            <div class="container">
+                <h5>
+                    <span>FEATURED POST</span>
+                </h5>
+                <?php get_template_part( 'partials/loop-content' ); ?>
+            </div>
+        </div>
     <?php endwhile; endif; wp_reset_postdata(); ?>
 <?php endif; ?>
 
 <?php if( have_posts() ): ?>
-    <section class="blog-listing-container js-load-more-block section-margins">
+    <section class="blog-listing-container js-load-more-block section-padding bg-gray">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
@@ -34,7 +41,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-md-offset-1">
+                <div class="col-md-4">
                     <?php get_sidebar(); ?>
                 </div>             
             </div>

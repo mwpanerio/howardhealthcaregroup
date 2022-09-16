@@ -32,7 +32,7 @@
 
 @media (max-width: 990px) {
     .admin-bar .page-header {
-        top: 46px;
+        top: 0;
     }
 
 }
@@ -446,6 +446,12 @@
     padding: 10px 0 0;
 }
 
+@media (max-width: 990px) {
+    .admin-bar .nav-primary {
+        top: 130px;
+    }
+}
+
 @media (min-width: 768px) {
     .nav-primary {
         height: auto;
@@ -787,6 +793,12 @@
  .masthead--innerpage {
     background: linear-gradient(to right,  rgba(29,66,138,1) 0%,rgba(0,118,128,1) 45%,rgba(5,150,162,1) 100%);
     padding: 20px 0;
+    color: var(--color-white);
+ }
+
+ .masthead--innerpage h1,
+ .masthead--innerpage h2,
+ .masthead--innerpage h3 {
     color: var(--color-white);
  }
 
