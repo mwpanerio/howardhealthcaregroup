@@ -188,8 +188,8 @@ fx_register_block(
         'description'   => '',
         'css'           => 'homepage/testimonial-with-form.css',
         'css_deps'      => [ 'fx_slick', 'fx_choices_custom', 'contact-form-7' ],
-        'js'            => 'homepage/testimonials-slider.js',
         'js_deps'       => [ 'fx_slick', 'contact-form-7', 'wpcf7-recaptcha', 'google-recaptcha' ],
+        'js'            => 'homepage/testimonials-slider.js',
         'category'      => 'fx-homepage-blocks',
     ]
 );
@@ -362,6 +362,17 @@ fx_register_block(
         'name'          => 'innerpage-cta-with-newsletter-signup',
         'title'         => 'Innerpage - CTA with Newsletter Signup',
         'template'      => 'innerpage/cta-with-newsletter-signup.php',
+        'description'   => '',
+        'css'           => 'homepage/cta.css',
+        'category'      => 'fx-innerpage-blocks',
+    ]
+);
+
+fx_register_block(
+    [
+        'name'          => 'innerpage-testimonial-list',
+        'title'         => 'Innerpage - Testimonials List',
+        'template'      => 'innerpage/testimonial-list.php',
         'description'   => '',
         'css'           => 'homepage/cta.css',
         'category'      => 'fx-innerpage-blocks',

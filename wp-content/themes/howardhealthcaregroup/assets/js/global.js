@@ -116,6 +116,18 @@ var FX = ( function( FX, $ ) {
 				$('.desktop-menu__phone, .js-search-toggle, .desktop-menu__search').toggleClass('js-search-active');
                 $('.desktop-menu__search input[name="s"]').focus();
 			});
+
+			if($(".js-testimonials-slider").length > 0) {
+				$(".js-testimonials-slider").slick( {
+					dots: false,
+					arrows: true,
+					autoplay: false,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					vertical: true,
+					verticalSwiping: true,
+				});
+			}
 			
 			/* ubermenu hack to force-show a Ubermenu submenu. Delete prior to launch */
 			// setInterval(function() {
