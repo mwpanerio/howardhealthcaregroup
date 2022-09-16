@@ -42,7 +42,7 @@
                     </nav>
                     <div class="search js-search-toggle hidden-md-down"><i class="icon-search"></i></div>
                     <div class="header-phone-btn hidden-xs-down"><a href="tel:(848) 456-8200" class="btn btn-primary"><i class="icon-phone"></i> (848) 456-8200</a></div>
-                    <div class="header-contact-btn hidden-xs-down"><a href="#" class="btn btn-primary">Contact Us</a></div>
+                    <div class="header-contact-btn hidden-xs-down"><a href="<?php echo get_the_permalink(71); ?>" class="btn btn-primary">Contact Us</a></div>
                     <div class="search js-search-toggle hidden-lg"><i class="icon-search"></i></div>
                     <div class="toggle-menu hidden-lg">
                         <span class="toggle-menu__icon">
@@ -59,7 +59,7 @@
             <div class="container clearfix">
                 <ul class="clearfix">
                     <li><a href="tel:(848) 456-8200"><i class="icon-phone"></i> (848) 456-8200</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="<?php echo get_the_permalink(71); ?>">Contact Us</a></li>
                 </ul>
             </div>
         </div>

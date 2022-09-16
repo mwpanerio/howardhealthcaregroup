@@ -1,3 +1,73 @@
 /**
  * Add styling for 404 page here
  */
+
+ .links-404 {
+    margin-top: 30px;
+ }
+
+ @media (min-width: 768px) {
+    .links-404 {
+        margin-top: 50px;
+    }
+ }
+
+ .image-button {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-top: 32px;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgba(29,66,138,0.16);
+}
+
+.image-button__img {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+
+.image-button__hover {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--color-white);
+    z-index: 1;
+    padding: 11px 54px 12px 19px;
+}
+
+.image-button__hover::before {
+    content: "\e90c";
+    font-family: 'icomoon';
+    height: 100%;
+    width: 44px;
+    position: absolute;
+    background-color: var(--color-teal);
+    right: 0;
+    top: 0;
+    color: var(--color-white);
+    font-size: 22px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-button__title {
+    padding: 0;
+    color: #161E43;
+    font-size: 18px;
+}
+
+@media (min-width: 1200px) {
+    .image-button__title {
+        font-size: 24px;
+    }
+}
