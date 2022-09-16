@@ -76,3 +76,7 @@
     width: 100%;
     height: auto;
 }
+
+.search-404 .desktop-menu_wrap {
+    max-width: 100%;
+}

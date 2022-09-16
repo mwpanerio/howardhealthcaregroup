@@ -36,6 +36,11 @@
     text-align: left;
 }
 
+.tab-accordion__panel__toggle {
+    background-color: var(--color-white);
+    padding: 15px 20px;
+}
+
 .tab-accordion__tab.is-active,
 .tab-accordion__panel__toggle.is-active {
     border-bottom: 1px solid var(--color-white);
