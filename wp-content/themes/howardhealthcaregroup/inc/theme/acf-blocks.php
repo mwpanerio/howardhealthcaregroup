@@ -72,7 +72,8 @@ fx_register_block(
         'title'         => 'WYSIWYG',
         'template'      => 'innerpage/wysiwyg.php',
         'description'   => 'A basic "What you see is what you get" editor.',
-        'css_deps'      => [ 'fx_wysiwyg' ],
+        'css_deps'      => [ 'fx_wysiwyg', 'fx_choices_custom', 'contact-form-7' ],
+        'js_deps'       => [ 'contact-form-7', 'wpcf7-recaptcha', 'google-recaptcha' ],
         'post_types'    => [],
     ]
 );
@@ -186,9 +187,9 @@ fx_register_block(
         'template'      => 'homepage/testimonial-with-form.php',
         'description'   => '',
         'css'           => 'homepage/testimonial-with-form.css',
-        'css_deps'      => [ 'fx_slick' ],
+        'css_deps'      => [ 'fx_slick', 'fx_choices_custom', 'contact-form-7' ],
         'js'            => 'homepage/testimonials-slider.js',
-        'js_deps'       => [ 'fx_slick' ],
+        'js_deps'       => [ 'fx_slick', 'contact-form-7', 'wpcf7-recaptcha', 'google-recaptcha' ],
         'category'      => 'fx-homepage-blocks',
     ]
 );
@@ -269,7 +270,8 @@ fx_register_block(
         'title'         => 'Innerpage - CTA with Form',
         'template'      => 'innerpage/cta-with-form.php',
         'description'   => '',
-        'css_deps'      => ['fx_full_width_image_text'],
+        'css_deps'      => [ 'fx_full_width_image_text', 'fx_choices_custom', 'contact-form-7' ],
+        'js_deps'       => [ 'contact-form-7', 'wpcf7-recaptcha', 'google-recaptcha' ],
         'category'      => 'fx-innerpage-blocks',
     ]
 );
