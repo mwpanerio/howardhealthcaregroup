@@ -18,7 +18,8 @@
                             <h4><?php echo $upper_text; ?></h4>
                             <?php endif; ?>
                             <a href="tel:<?php echo strip_tags(get_sub_field('phone_number')); ?>">
-                            <i class="icon-phone"></i><?php echo get_sub_field('phone_number'); ?>
+                                <i class="icon-phone"></i>
+                                <span><?php echo get_sub_field('phone_number'); ?></span>
                             </a>
                         </div>
                         <?php endwhile; ?>

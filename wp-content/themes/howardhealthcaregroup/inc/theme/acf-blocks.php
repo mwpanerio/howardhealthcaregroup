@@ -87,6 +87,7 @@ $cf7_settings = [
     'title'         => 'CF7 Block',
     'template'      => 'general/cf7-block.php',
     'description'   => 'Adds a CF7 block to page',
+    'css'           => 'innerpage/form-block.css',
     'css_deps'      => [ 'fx_choices_custom', 'contact-form-7' ],
     'js_deps'       => [ 'contact-form-7', 'wpcf7-recaptcha', 'google-recaptcha' ],
     'keywords'      => [ 'cf7', 'contact', 'form' ],

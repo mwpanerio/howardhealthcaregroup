@@ -545,6 +545,7 @@ blockquote i::after {
     background: var(--color-teal);
     z-index: 1;
     text-transform: capitalize;
+    margin-bottom: 10px;
 }
 
 .btn-secondary {
@@ -601,6 +602,10 @@ blockquote i::after {
 }
 
 @media (min-width: 1200px) {
+    .btn {
+        margin-bottom: 30px;
+    }
+
     .btn+.btn {
         margin-top: 0;
         margin-left: 50px;
