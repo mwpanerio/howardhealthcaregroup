@@ -14,9 +14,11 @@
 	<div class="search-result__img-container">
 		<?php echo fx_get_image_tag( get_post_thumbnail_id(), 'search-result__img', 'thumbnail' ); ?>
 	</div>
-	<h2 class="search-result__title"><?php echo $title; ?></h2>
-	<div class="search-result__excerpt">
-		<?php echo $excerpt; ?>
+	<div class="search-result__content">
+		<h2 class="search-result__title"><?php echo $title; ?></h2>
+		<div class="search-result__excerpt">
+			<?php echo $excerpt; ?>
+		</div>
+		<span class="btn btn--primary search-result__link">Read more</span>
 	</div>
-	<span class="btn btn--primary search-result__link">Read more</span>
 </a>

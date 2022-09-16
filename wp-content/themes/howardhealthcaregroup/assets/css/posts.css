@@ -519,3 +519,17 @@ progress::-webkit-progress-value {
     margin-bottom: 20px;
 }
 
+@media (min-width: 1200px) {
+    .search-result {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.search-result__img-container {
+    margin-right: 20px;
+}
+
+.search-result__content {
+    flex: 1;
+}
