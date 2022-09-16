@@ -12,7 +12,7 @@
 
 <a class="search-result" href="<?php the_permalink(); ?>">
 	<div class="search-result__img-container">
-		<?php echo fx_get_image_tag( get_post_thumbnail_id(), 'search-result__img', 'thumbnail' ); ?>
+		<?php echo fx_get_image_tag( get_post_thumbnail_id(), 'search-result__img', 'medium' ); ?>
 	</div>
 	<h2 class="search-result__title"><?php echo $title; ?></h2>
 	<div class="search-result__excerpt">
