@@ -296,7 +296,7 @@
 
 /* Modifier */
 .testimonials--lists .testimonials-content {
-    height: auto;
+    height: 100%;
 }
 
 .testimonials--lists .testimonials-column__inner {
