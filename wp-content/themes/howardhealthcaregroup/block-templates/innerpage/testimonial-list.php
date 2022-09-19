@@ -9,12 +9,10 @@
                     <?php if($title = get_field('title')): ?>
                     <h2><?php echo $title; ?></h2>
                     <?php endif; ?>
+                    <?php if($description = get_field('description')): ?>
+                        <?php echo $description; ?>
+                    <?php endif; ?>
                 </div>
-                <?php if($button = get_field('button')): ?>
-                <div class="testimonials-btn">
-                    <a href="<?php echo $button['url']; ?>" class="btn btn-primary"<?php echo $button['target'] ? ' target="' . $button['target'] . '"': ''; ?>><?php echo $button['title']; ?></a>
-                </div>
-                <?php endif; ?>
             </div>
             <?php
                 $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
