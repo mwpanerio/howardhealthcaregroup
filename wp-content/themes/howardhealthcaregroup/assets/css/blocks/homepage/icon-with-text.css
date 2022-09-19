@@ -307,7 +307,6 @@
 
     .card-icon-item {
         margin-top: 24px;
-        filter: blur(0px);
         transform: scale(1);
         opacity: 1;
         transition: filter 0.3s ease-in-out,
@@ -317,9 +316,8 @@
 
     
     .card-icon-item.is-not-focused {
-        filter: blur(1.5px);
         transform: scale(0.95);
-        opacity: 0.75;
+        opacity: 0.65;
     }
 }
 
