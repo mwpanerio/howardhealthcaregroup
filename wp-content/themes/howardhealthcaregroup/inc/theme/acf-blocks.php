@@ -335,7 +335,7 @@ fx_register_block(
 fx_register_block(
     [
         'name'          => 'innerpage-testimonials',
-        'title'         => 'Innerpage - Testimonials',
+        'title'         => 'Innerpage - Testimonials Slider',
         'template'      => 'innerpage/testimonials.php',
         'description'   => '',
         'css'           => 'innerpage/testimonials.css',
@@ -374,7 +374,7 @@ fx_register_block(
         'title'         => 'Innerpage - Testimonials List',
         'template'      => 'innerpage/testimonial-list.php',
         'description'   => '',
-        'css'           => 'homepage/cta.css',
+        'css'           => 'innerpage/testimonials.css',
         'category'      => 'fx-innerpage-blocks',
     ]
 );
