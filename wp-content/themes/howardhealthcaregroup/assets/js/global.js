@@ -128,6 +128,12 @@ var FX = ( function( FX, $ ) {
 					verticalSwiping: true,
 				});
 			}
+
+			$('.wysiwyg').each(function() {
+				const $this = $(this);
+
+				$this.find('table').wrap('<div class="table-scroll"><div class="table-structure"></div></div>');
+			})
 			
 			/* ubermenu hack to force-show a Ubermenu submenu. Delete prior to launch */
 			// setInterval(function() {

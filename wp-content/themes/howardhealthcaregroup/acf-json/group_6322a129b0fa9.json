@@ -73,7 +73,7 @@
                     "label": "Main Image",
                     "name": "main_image",
                     "type": "image",
-                    "instructions": "",
+                    "instructions": "Recommended Image Size : 565px x 497px",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -97,7 +97,7 @@
                     "label": "Floating Image",
                     "name": "floating_image",
                     "type": "image",
-                    "instructions": "",
+                    "instructions": "Recommended Image Size : 340px x 340px",
                     "required": 0,
                     "conditional_logic": [
                         [
@@ -227,5 +227,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663253062
+    "modified": 1663555782
 }

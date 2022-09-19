@@ -83,7 +83,7 @@
                     "label": "Icon Image",
                     "name": "icon_image",
                     "type": "image",
-                    "instructions": "",
+                    "instructions": "Recommended Image File Type : SVG <br>\r\nRecommended Image Size : 86 x (height auto)",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -176,5 +176,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663248815
+    "modified": 1663555676
 }

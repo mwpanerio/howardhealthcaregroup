@@ -7,7 +7,7 @@
             "label": "Background Image",
             "name": "background_image",
             "type": "image",
-            "instructions": "",
+            "instructions": "Recommended Image Size : 1920px x 1080px",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -204,5 +204,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663251314
+    "modified": 1663555795
 }

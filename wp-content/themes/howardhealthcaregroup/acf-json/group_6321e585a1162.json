@@ -22,7 +22,7 @@
                     "label": "Large Image",
                     "name": "large_image",
                     "type": "image",
-                    "instructions": "",
+                    "instructions": "Recommended Image Size : 565px x 497px",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -46,7 +46,7 @@
                     "label": "Small Image",
                     "name": "small_image",
                     "type": "image",
-                    "instructions": "",
+                    "instructions": "Recommended Image Size : 334px x 334px",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -143,5 +143,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663203536
+    "modified": 1663555975
 }

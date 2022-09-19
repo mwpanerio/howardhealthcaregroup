@@ -13,15 +13,25 @@
         <div class="row flex-row <?php echo $image_class_modifier; ?> <?php echo get_field('image_position') == 'right' ? 'flex-opposite': ''; ?>">
             <div class="col-md-6 image-text__half image-text__img">
                 <?php if($image_to_display_type == 'single'): ?>
-                    <img src="../wp-content/themes/howardhealthcaregroup/assets/img/right-image.jpg" alt="" class="object-fit">           
+                    <?php while(have_rows('image_to_display')): the_row(); ?>
+                        <?php if($main_image = get_sub_field('main_image')): ?>
+                            <?php echo fx_get_image_tag($main_image, 'object-fit'); ?>
+                        <?php endif; ?>
+                    <?php endwhile; ?>
                 <?php else: ?>
                     <div class="image-text__img__overlay">
-                        <div class="image-text__img__large">
-                            <img src="../wp-content/themes/howardhealthcaregroup/assets/img/left-image-learge.jpg" alt="" class="object-fit">
-                        </div>
-                        <div class="image-text__img__small">
-                            <img src="../wp-content/themes/howardhealthcaregroup/assets/img/left-image-small.jpg" alt="" class="object-fit">
-                        </div>
+                        <?php while(have_rows('image_to_display')): the_row(); ?>
+                            <?php if($main_image = get_sub_field('main_image')): ?>
+                            <div class="image-text__img__large">
+                                <?php echo fx_get_image_tag($main_image, 'object-fit'); ?>
+                            </div>
+                            <?php endif; ?>
+                            <?php if($floating_image = get_sub_field('floating_image')): ?>
+                            <div class="image-text__img__small">
+                                <?php echo fx_get_image_tag($floating_image, 'object-fit'); ?>
+                            </div>
+                            <?php endif; ?>
+                        <?php endwhile; ?>
                     </div> 
                 <?php endif; ?>
             </div>
