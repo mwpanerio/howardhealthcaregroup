@@ -255,7 +255,14 @@ function fx_restrict_homepage_blocks( $allowed_blocks, WP_Block_Editor_Context $
         // @todo — add blocks that should be only on homepage. Block name should be acf/{name}
         $disallowed_blocks = [
             'acf/homepage-block',
-            'acf/homepage-masthead-slider', // TODO remove if not using homepage masthead slider
+            'acf/homepage-masthead-slider',
+            'acf/homepage-icon-with-text',
+            'acf/homepage-half-image-text',
+            'acf/homepage-testimonial-with-form',
+            'acf/homepage-half-floating-image-text',
+            'acf/homepage-full-width-background-text',
+            'acf/homepage-post-to-display',
+            'acf/homepage-cta',
         ];
         
         if( is_bool( $allowed_blocks ) ) {

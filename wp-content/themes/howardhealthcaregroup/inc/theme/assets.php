@@ -90,7 +90,7 @@ function fx_theme_styles() {
         [
             'handle'    => 'site-posts',
             'src'       => $theme_url . '/assets/css/posts.css',
-            'enqueue'   => ( is_single() || is_home() || is_archive() || is_search() )
+            'enqueue'   => ( is_single() || is_home() || is_archive() || is_search() || has_block('acf/innerpage-testimonial-list'))
         ]
     );
 

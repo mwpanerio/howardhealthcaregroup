@@ -293,3 +293,12 @@
         padding-top: 20px;
     }
 }
+
+/* Modifier */
+.testimonials--lists .testimonials-content {
+    height: auto;
+}
+
+.testimonials--lists .testimonials-column {
+    margin: 0;
+}
