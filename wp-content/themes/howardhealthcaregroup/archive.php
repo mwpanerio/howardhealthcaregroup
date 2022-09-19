@@ -3,7 +3,7 @@
 <?php get_template_part('partials/masthead'); ?>
 
 <?php if( have_posts() ): ?>
-    <section class="<?php echo get_post_type(); ?>-listing-container js-load-more-block section-margins" data-load-more-post-type="<?php echo get_post_type(); ?>">
+    <section class="<?php echo get_post_type(); ?>-listing-container js-load-more-block bg-gray section-padding" data-load-more-post-type="<?php echo get_post_type(); ?>">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
@@ -18,7 +18,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-md-offset-1">
+                <div class="col-md-4">
                     <?php get_sidebar(); ?>
                 </div>  
             </div>
