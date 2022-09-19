@@ -311,14 +311,16 @@
 @media (min-width: 1200px) {
     .testimonials--lists .testimonials-content {
         height: 100%;
+        margin: 0;
     }
-    
+
     .testimonials--lists .testimonials-column__inner {
-        margin: 0 -20px;
+        margin: 0 -20px -40px;
     }
 
     .testimonials--lists .testimonials-column__item {
         width: 50%;
         padding: 0 20px;
+        margin-bottom: 40px;
     }
 }
