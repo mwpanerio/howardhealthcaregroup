@@ -45,7 +45,7 @@
                     <div class="tab-accordion__tabs hidden-sm-down">
                         <?php foreach( $tabbed_content as $id => $data ): ?>
                             <button 
-                                class="tab-accordion__tab js-tab-accordion-btn <?php if( $id === $active_id ) echo 'is-active'; ?>" 
+                                class="tab-accordion__tab js-tab-accordion-btn <?php if( $tab_id === $active_id ) echo 'is-active'; ?>" 
                                 type="button"
                                 data-tab-id="<?php echo esc_attr( $id ); ?>"
                             ><?php echo $data['label']; ?></button>
