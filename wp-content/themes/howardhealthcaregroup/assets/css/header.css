@@ -58,7 +58,15 @@
 }
 
 .site-logo {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 1200px) {
+    .site-logo img {
+        margin-top: 10px;
+    }
 }
 
 /* Most retina devices */
