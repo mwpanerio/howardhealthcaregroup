@@ -21,8 +21,15 @@
             $active_id = $tab_id;
         }
 
-        $data['label'] = $label;
-        $tabbed_content[ $tab_id ] = $data;
+        if(!isset($_GET['post_type'])) {
+            $data['label'] = $label;
+            $tabbed_content[ $tab_id ] = $data;
+        } else {
+            if($data['tab_title'] !== 'Pages') {
+                $data['label'] = $label;
+                $tabbed_content[ $tab_id ] = $data;
+            }
+        }
     }
 ?>
 
