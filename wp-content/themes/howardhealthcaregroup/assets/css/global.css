@@ -918,6 +918,5 @@ textarea::placeholder {
         position: -webkit-sticky;
         position: sticky;
         top: 125px;
-        /* TODO: update to match how far down page when sidebar should stick */
     }
 }
