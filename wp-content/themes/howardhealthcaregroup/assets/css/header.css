@@ -30,6 +30,7 @@
     top: 0;
 }
 
+/* WP Admin Bar */
 @media (max-width: 990px) {
     .admin-bar .page-header {
         top: 0;
@@ -482,6 +483,7 @@
     padding: 10px 0 0;
 }
 
+/* WP Admin Bar */
 @media (max-width: 990px) {
     .admin-bar .nav-primary {
         top: 130px;

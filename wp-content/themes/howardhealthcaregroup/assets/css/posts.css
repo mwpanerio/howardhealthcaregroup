@@ -7,7 +7,11 @@
 
 \*------------------------------------*/
 
-@media (max-width: 767px) {
+.single-post .wysiwyg {
+    padding: 35px 15px;
+}
+
+@media (min-width: 768px) {
     .single-post .wysiwyg {
         padding: 35px 15px;
     }
