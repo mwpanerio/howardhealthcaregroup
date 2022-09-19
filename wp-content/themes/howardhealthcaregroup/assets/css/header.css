@@ -63,12 +63,6 @@
     justify-content: center;
 }
 
-@media (min-width: 1200px) {
-    .site-logo img {
-        margin-top: 10px;
-    }
-}
-
 /* Most retina devices */
 @media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (max-width: 1024px) { 
 	
@@ -462,6 +456,12 @@
     .js-search-toggle {
         position: relative;
         z-index: 1;
+    }
+}
+
+@media (min-width: 1200px) {
+    .site-logo img {
+        margin-top: 10px;
     }
 }
 
