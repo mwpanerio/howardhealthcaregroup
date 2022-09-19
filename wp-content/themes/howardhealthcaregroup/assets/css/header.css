@@ -67,7 +67,8 @@
   
     .site-logo {
         background: url('/wp-content/uploads/2022/09/logo-high-res-hhg.png');
-        background-size: 165px 45px;
+        background-size: contain;
+        background-repeat: no-repeat;
         display: inline-block;
         height: auto;
         width: 100%;
@@ -81,7 +82,7 @@
   
     .site-logo {
         background: url('/wp-content/uploads/2022/09/logo-high-res-hhg.png');
-        background-size: 158px 70px;
+        background-size: contain;
         background-repeat: no-repeat;
         display: inline-block;
         height: auto;
