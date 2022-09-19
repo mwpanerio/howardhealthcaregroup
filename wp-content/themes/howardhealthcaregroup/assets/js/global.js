@@ -27,6 +27,10 @@ var FX = ( function( FX, $ ) {
 	$( () => {
         FX.MobileMenu.init(); // Enable by default
 	})
+
+	$( () => {
+        FX.CardIconHover.init(); // Enable by default
+	})
 	
 	
 	$(window).on( 'load', () => {
@@ -316,6 +320,24 @@ var FX = ( function( FX, $ ) {
 				return false;
 			}
 		}
+	};
+
+	FX.CardIconHover = {
+		init() {
+			$('.js-card-article').on('mouseenter', function() {
+				const $this = $(this);
+
+				$('.js-card-article').not($this).addClass('is-not-focused');
+				$this.addClass('is-focused');
+			})
+
+			$('.js-card-article').on('mouseleave', function() {
+				const $this = $(this);
+
+				$('.js-card-article').not($this).removeClass('is-not-focused');
+				$this.removeClass('is-focused');
+			})
+		},
 	};
 
 	

@@ -22,8 +22,8 @@
 
                 $args = array(
                     'post_type' => 'testimonial',
-                    'posts_per_page' => get_option('posts_per_page'),
-                    'paged'=> $paged
+                    'posts_per_page' => -1,
+                    // 'paged'=> $paged
                 );
 
                 $testimonial_posts = new WP_Query( $args );
@@ -37,11 +37,8 @@
                 data-load-more-current-page="<?php echo esc_attr( $paged ); ?>">
                 <div class="testimonials-column__inner js-load-more-posts">
                     <?php while($testimonial_posts->have_posts()): $testimonial_posts->the_post(); ?>
-                        <?php echo get_template_part( 'partials/loop-content' ); ?>
+                        <?php echo get_template_part( 'partials/testimonial-card' ); ?>
                     <?php endwhile; ?>
-                </div>
-                <div class="testimonials-column__pagination">
-                    <?php get_template_part( 'partials/pagination' ); ?> 
                 </div>
             </div>
             <?php endif; ?>

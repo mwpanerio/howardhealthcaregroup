@@ -23,7 +23,7 @@
         <div class="row card-icon-flex">
             <?php if(have_rows('icon_buttons')): ?>
             <?php while(have_rows('icon_buttons')): the_row(); ?>
-            <div class="col-lg-3 col-sm-6 col-xxs-12 card-icon-item">
+            <div class="col-lg-3 col-sm-6 col-xxs-12 card-icon-item js-card-article">
                 <a class="card-icon card-icon--link" href="<?php echo get_sub_field('link')['url']; ?>"<?php echo get_sub_field('link')['target'] ? ' target="' . get_sub_field('link')['target'] . '"': ''; ?>>
                     <div class="card-icon__top">
                         <div class="card-icon__img-wrap">

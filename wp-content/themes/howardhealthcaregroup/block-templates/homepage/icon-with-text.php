@@ -8,7 +8,7 @@
             <div class="text-block-icon__icon">
                 <div class="row card-icon-flex">
                     <?php while(have_rows('icon_with_text')): the_row(); ?>
-                    <div class="col-lg-4 col-sm-6 col-xxs-12 card-icon-item">
+                    <div class="col-lg-4 col-sm-6 col-xxs-12 card-icon-item js-card-article">
                         <a class="card-icon card-icon--home card-icon--link" href="#">
                             <div class="card-icon__top">
                                 <div class="card-icon__img-wrap">

@@ -398,6 +398,7 @@
 @media (min-width: 1200px) {
     .page-header {
         position: fixed;
+        box-shadow: 0 0 16px rgba(29, 66, 138, 0.08);
     }
 
     .header-top {

@@ -14,7 +14,7 @@
 
                         foreach($posts as $post):
                     ?>
-                    <div class="col-sm-6 col-lg-4 card-item">
+                    <div class="col-sm-6 col-lg-4 card-item js-card-article">
                         <a href="<?php echo get_the_permalink($post); ?>" class="card card--link">
                             <div class="card__top">
                                 <div class="card__img-wrap">
