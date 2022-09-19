@@ -667,7 +667,8 @@
     }
     
     .nav-primary .sub-menu li a:hover {
-        box-shadow: inset 0 50px var(--color-light-teal);
+        background-color: var(--color-white);
+        box-shadow: inset 0 -50px var(--color-light-teal);
     }
 }
 
