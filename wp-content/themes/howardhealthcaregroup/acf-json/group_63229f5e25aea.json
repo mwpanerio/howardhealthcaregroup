@@ -83,7 +83,7 @@
                     "label": "Image",
                     "name": "image",
                     "type": "image",
-                    "instructions": "",
+                    "instructions": "Recommended Image Size : 420 x 300",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -176,5 +176,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663213572
+    "modified": 1663555608
 }

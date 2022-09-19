@@ -7,7 +7,7 @@
             "label": "Slides",
             "name": "slides",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "Recommended Image Size : 1920px x 1080px",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -173,5 +173,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663160073
+    "modified": 1663555874
 }

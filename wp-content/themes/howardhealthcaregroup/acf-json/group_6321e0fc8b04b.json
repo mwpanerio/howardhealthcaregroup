@@ -51,7 +51,7 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "maxlength": "",
+                    "maxlength": 75,
                     "rows": "",
                     "new_lines": "br"
                 },
@@ -96,7 +96,7 @@
             "label": "Image",
             "name": "image",
             "type": "image",
-            "instructions": "",
+            "instructions": "Recommended Image Size : 565px x 497px",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -214,5 +214,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663165059
+    "modified": 1663557628
 }

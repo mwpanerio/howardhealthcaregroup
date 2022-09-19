@@ -157,6 +157,24 @@ function fx_mce_before_init( $settings ) {
             'classes'  => 'btn',
         ),
 
+        array(
+            'title'    => 'Primary Button',
+            'selector' => 'a',
+            'classes'  => 'btn btn-primary',
+        ),
+
+        array(
+            'title'    => 'Secondary Button',
+            'selector' => 'a',
+            'classes'  => 'btn btn-secondary',
+        ),
+
+        array(
+            'title'    => 'Tertiary Button',
+            'selector' => 'a',
+            'classes'  => 'btn btn-tertiary',
+        ),
+
         /*
         Examples for adding styles
         array(

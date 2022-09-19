@@ -15,7 +15,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row image-buttons__row">
             <?php if(have_rows('image_buttons')): ?>
             <?php while(have_rows('image_buttons')): the_row(); ?>
             <div class="col-lg-4 col-sm-6 col-xxs-12">

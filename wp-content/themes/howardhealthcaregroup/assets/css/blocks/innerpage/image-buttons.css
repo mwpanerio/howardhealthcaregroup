@@ -1,3 +1,7 @@
+.image-buttons__row {
+    justify-content: center;
+}
+
 .image-button {
     position: relative;
     display: block;
