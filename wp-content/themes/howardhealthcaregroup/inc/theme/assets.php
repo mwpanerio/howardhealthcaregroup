@@ -116,7 +116,7 @@ function fx_theme_styles() {
     fx_assets_add_stylesheet(
         [
             'handle'        => 'fx_client_testimonial',
-            'src'           => $theme_url . '/assets/css/blocks/homepage/testimonials.css',
+            'src'           => $theme_url . '/assets/css/blocks/innerpage/testimonials.css',
             'dependencies'  => [ 'fx_slick' ],
             'enqueue'       => ( has_block('acf/homepage-masthead-slider') )
         ]
