@@ -40,3 +40,11 @@ input.wpcf7-not-valid,
   padding-right: 50px;
   background-color: #F4F9FA;
 }
+
+.wpcf7-spinner {
+  display: none;
+}
+
+.wpcf7-form.submitting .wpcf7-spinner {
+  display: inline-block;
+}
