@@ -160,7 +160,7 @@
     color: var(--color-charcoal);
     position: relative;
     margin: 17px 0;   
-    height: 250px;
+    height: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
