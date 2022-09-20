@@ -96,6 +96,7 @@
     }
 
     .cta__wrap {
+        align-items: center;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -104,6 +105,10 @@
         -webkit-box-pack: start;
             -ms-flex-pack: start;
                 justify-content: flex-start;
+    }
+
+    .cta__wrap h2 {
+        padding-bottom: 0;
     }
 
     .cta__content {
