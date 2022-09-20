@@ -183,6 +183,9 @@
         height: 584px;
     }
 
+    .column-reverse {
+        flex-direction: initial;
+    }
 }
 
 
@@ -198,10 +201,6 @@
 
     .flex-opposite {
         flex-direction: row-reverse;
-    }
-
-    .column-reverse {
-        flex-direction: initial;
     }
 
     .image-text__img {
