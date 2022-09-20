@@ -457,7 +457,7 @@ blockquote {
             box-shadow: 0 0 16px rgba(29,66,138,0.16);
     border-radius: 4px;
     max-width: 872px;
-    margin: 10px auto 20px;
+    margin: 20px auto 20px;
     background-color: var(--color-white);
 }
 
