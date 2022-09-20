@@ -39,8 +39,14 @@
 }
 
 .full-width-image-text--direct-overlay .full-width-image-text__headline,
-.full-width-image-text--direct-overlay .full-width-image-text__description p {
+.full-width-image-text--direct-overlay .full-width-image-text__description p,
+.full-width-image-text--direct-overlay .full-width-image-text__description ul li,
+.full-width-image-text--direct-overlay .full-width-image-text__description ol li {
     color: var(--color-white);
+}
+
+.full-width-image-text--direct-overlay .full-width-image-text__description ul li:before {
+    background-color: var(--color-white);
 }
 
 .full-width-image-text--box-overlay .full-width-image-text__headline {
