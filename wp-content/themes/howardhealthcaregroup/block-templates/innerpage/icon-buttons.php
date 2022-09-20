@@ -3,7 +3,7 @@
     $title = get_field('title');
     $description = get_field('description');
 ?>
-<section class="cards-icon bg-gray section-padding hard-top cards-icon--inner">
+<section class="cards-icon bg-gray section-padding cards-icon--inner">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
