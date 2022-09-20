@@ -509,3 +509,27 @@
     
     
 }
+
+.card-icon__icon {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.card-icon__icon img {
+    width: auto;
+    height: 100%;
+}
+
+@media (min-width: 1200px) {
+    .card-icon__icon {
+        text-align: left;
+        width: auto;
+        height: auto;
+    }
+
+    .card-icon__icon img {
+        width: auto;
+        height: auto;
+    }
+}
