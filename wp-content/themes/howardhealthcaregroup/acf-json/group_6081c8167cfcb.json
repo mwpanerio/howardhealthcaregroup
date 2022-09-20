@@ -17,7 +17,6 @@
             },
             "choices": {
                 "bg-white": "White",
-                "bg-teal": "Teal",
                 "bg-light-teal": "Light Teal"
             },
             "default_value": false,
@@ -139,5 +138,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663245911
+    "modified": 1663686065
 }
