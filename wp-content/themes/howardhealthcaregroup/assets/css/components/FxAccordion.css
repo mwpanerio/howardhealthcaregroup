@@ -2,6 +2,12 @@
     position: relative;
 }
 
+.fx-accordion ul,
+.fx-accordion ol {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .fx-accordion__panels {
     padding-top: 30px;
 }
