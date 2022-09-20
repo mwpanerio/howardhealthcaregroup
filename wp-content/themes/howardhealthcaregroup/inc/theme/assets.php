@@ -281,6 +281,7 @@ function fx_theme_style_trumps() {
         [
             'handle'        => 'site-trumps',
             'src'           => get_template_directory_uri() . '/assets/css/trumps.css',
+            'inline'        => true,
             'enqueue'       => !is_admin()
         ]
     );
