@@ -197,8 +197,14 @@
 
 .page-sidebar {
     background-color: var(--color-white);
-    padding: 45px;
+    padding: 20px 22px;
     margin-top: 35px;
+}
+
+@media (min-width: 768px) {
+    .page-sidebar {
+        padding: 45px;
+    }
 }
 
 @media (min-width: 1200px) {
