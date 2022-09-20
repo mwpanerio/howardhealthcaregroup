@@ -834,6 +834,10 @@
         width: auto;
     }
 
+    .nav-primary .sub-menu .sub-menu {
+        top: -5px;
+    }
+
     .nav-primary a:hover {
         border: none;
         background: none;
