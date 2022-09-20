@@ -387,6 +387,13 @@ ul, ol {
     width: auto;
     overflow: hidden;
     padding-left: 15px;
+
+}
+
+ol,
+ul {
+    display: inline-block;
+    width: auto;
 }
 
 .page-content ul {
