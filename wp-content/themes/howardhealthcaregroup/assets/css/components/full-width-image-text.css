@@ -70,8 +70,14 @@
     color: #1D428A
 }
 
-.full-width-image-text--box-overlay .full-width-image-text__description p {
+.full-width-image-text--box-overlay .full-width-image-text__description p,
+.full-width-image-text--box-overlay .full-width-image-text__description ul li,
+.full-width-image-text--box-overlay .full-width-image-text__description ol li {
     color: var(--color-charcoal);
+}
+
+.full-width-image-text--box-overlay .full-width-image-text__description ul li:before {
+    background-color: var(--color-charcoal);
 }
 
 .full-width-image-text--direct-overlay:before {
