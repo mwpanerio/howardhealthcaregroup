@@ -49,5 +49,25 @@
     </section>
 <?php endif; ?>
 
+<section class="cta cta--newsletter section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <div class="cta__wrap">
+                    <div class="cta__content">
+                        <h5><span>STAY IN THE LOOP</span></h5>
+                        <h2>Subscribe to Our Newsletter</h2>
+                    </div>
+                    <div class="cta__info">
+                        <div class="cta__info__form">
+                            <?php echo apply_shortcodes('[contact-form-7 id="180" title="Newsletter Sign Up"]'); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <?php get_footer(); ?>

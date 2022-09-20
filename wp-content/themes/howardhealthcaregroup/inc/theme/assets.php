@@ -94,6 +94,14 @@ function fx_theme_styles() {
         ]
     );
 
+    fx_assets_add_stylesheet(
+        [
+            'handle'    => 'site-cta-newsletter',
+            'src'       => $theme_url . '/assets/css/blocks/homepage/cta.css',
+            'enqueue'   => ( is_single() || is_home() || is_archive() )
+        ]
+    );
+
     // Styles for only 404 page
     fx_assets_add_stylesheet(
         [
