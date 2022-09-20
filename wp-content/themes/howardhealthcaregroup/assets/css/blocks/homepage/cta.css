@@ -205,3 +205,20 @@
     right: -34px;
     top: 14px;
 }
+
+.cta--newsletter .mailpoet_form_paragraph  {
+    padding-bottom: 0;
+}
+
+.cta--newsletter .parsley-errors-list {
+    list-style-type: none;
+}
+
+.cta--newsletter .parsley-errors-list li:before {
+    display: none;
+}
+
+.cta--newsletter .parsley-errors-list li {
+    padding-left: 0;
+    margin: 0;
+}

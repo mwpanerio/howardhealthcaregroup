@@ -60,7 +60,7 @@
                     </div>
                     <div class="cta__info">
                         <div class="cta__info__form">
-                            <?php echo apply_shortcodes('[contact-form-7 id="180" title="Newsletter Sign Up"]'); ?>
+                            <?php echo apply_shortcodes('[mailpoet_form id="1"]'); ?>
                         </div>
                     </div>
                 </div>
