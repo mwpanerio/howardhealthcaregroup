@@ -98,7 +98,7 @@
         -ms-flex-align: center;
             align-items: center;
     padding: 10px 19px 10px 19px;
-    height: 53px;
+    height: auto;
 }
 
 .card-icon--home .card-icon__img-wrap {
