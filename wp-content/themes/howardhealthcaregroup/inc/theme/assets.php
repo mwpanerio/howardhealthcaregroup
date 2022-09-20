@@ -480,3 +480,14 @@ function fx_dequeue_jquery_migrate( WP_Scripts $scripts ): void {
         );
     }
 }
+
+/* Add Manually CF7 Scripts */
+
+add_filter('fx_bam_include_cf7_scripts', 'fx_include_cf7_on_frontpage' );
+function fx_include_cf7_on_frontpage( $include_cf7 ) {
+    if ( is_archive($include_cf7) || is_singular($include_cf7) || is_home($include_cf7) ) {
+        $include_cf7 = true;
+    }
+    
+    return $include_cf7;
+}
