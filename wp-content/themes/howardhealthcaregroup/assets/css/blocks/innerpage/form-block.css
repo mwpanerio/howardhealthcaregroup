@@ -1,7 +1,15 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .form-block {
     background: var(--color-white);
     border-radius: 4px;
-    box-shadow: 0 0 24px rgba(29, 66, 138, 0.16);
+    -webkit-box-shadow: 0 0 24px rgba(29, 66, 138, 0.16);
+            box-shadow: 0 0 24px rgba(29, 66, 138, 0.16);
     padding: 30px 34px 24px;
     color: var(--color-charcoal);
     position: relative;
@@ -28,7 +36,8 @@
 .contact-sidebar {
     background: var(--color-white);
     border-radius: 4px;
-    box-shadow: 0 0 24px rgba(29, 66, 138, 0.16);
+    -webkit-box-shadow: 0 0 24px rgba(29, 66, 138, 0.16);
+            box-shadow: 0 0 24px rgba(29, 66, 138, 0.16);
     padding: 30px 20px 10px;
     color: var(--color-charcoal);
     position: relative;

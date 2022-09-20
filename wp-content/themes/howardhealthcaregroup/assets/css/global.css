@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* Global CSS */
 
 /**
@@ -28,8 +35,13 @@
 
 @media (min-width: 1200px) {
     body {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         min-height: 100vh;
     }
 }
@@ -166,6 +178,8 @@ img {
 /* Fade-in for lazyloaded images */
 .will-lazyload {
     opacity: 0;
+    -webkit-transition: opacity .25 linear;
+    -o-transition: opacity .25 linear;
     transition: opacity .25 linear;
 }
 
@@ -421,10 +435,14 @@ a {
     color: var(--color-teal);
     position: relative;
     z-index: 1;
+    background: -webkit-gradient(linear,  left top, left bottom,  from(rgba(0,118,128,1)),to(rgba(0,118,128,1)));
+    background: -o-linear-gradient(top,  rgba(0,118,128,1) 0%,rgba(0,118,128,1) 100%);
     background: linear-gradient(to bottom,  rgba(0,118,128,1) 0%,rgba(0,118,128,1) 100%);
     background-position: 0 100%;
     background-repeat: repeat-x;
     background-size: 1px 1px;
+    -webkit-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
     transition: all ease-in-out 0.3s; 
 }
 
@@ -435,7 +453,8 @@ blockquote {
     line-height: 1.62em;
     font-weight: normal;
     position: relative;
-    box-shadow: 0 0 16px rgba(29,66,138,0.16);
+    -webkit-box-shadow: 0 0 16px rgba(29,66,138,0.16);
+            box-shadow: 0 0 16px rgba(29,66,138,0.16);
     border-radius: 4px;
     max-width: 872px;
     margin: 10px auto 20px;
@@ -541,6 +560,8 @@ blockquote i::after {
     border-radius: 4px;
     border: 2px solid var(--color-teal);
     position: relative;
+    -webkit-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
     transition: all ease-in-out 0.3s;
     background: var(--color-teal);
     z-index: 1;
@@ -585,10 +606,17 @@ blockquote i::after {
 }
 
 
+@-webkit-keyframes shake {
+    0%, 100% {-webkit-transform: translateX(0);transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {-webkit-transform: translateX(-5px);transform: translateX(-5px);}
+    20%, 40%, 60%, 80% {-webkit-transform: translateX(5px);transform: translateX(5px);}
+}
+
+
 @keyframes shake {
-    0%, 100% {transform: translateX(0);}
-    10%, 30%, 50%, 70%, 90% {transform: translateX(-5px);}
-    20%, 40%, 60%, 80% {transform: translateX(5px);}
+    0%, 100% {-webkit-transform: translateX(0);transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {-webkit-transform: translateX(-5px);transform: translateX(-5px);}
+    20%, 40%, 60%, 80% {-webkit-transform: translateX(5px);transform: translateX(5px);}
 }
 
 @media (min-width: 600px) {
@@ -627,7 +655,8 @@ blockquote i::after {
     }
 
     .btn-tertiary:hover:after {
-        animation: shake 5s ease infinite;
+        -webkit-animation: shake 5s ease infinite;
+                animation: shake 5s ease infinite;
     }
 
     .btn-white:hover {
@@ -768,6 +797,8 @@ textarea {
     color: var(--color-charcoal);
     font-size: 16px;
     font-weight: 400;
+    -webkit-transition: all ease-in-out 0.1s;
+    -o-transition: all ease-in-out 0.1s;
     transition: all ease-in-out 0.1s;
     border: 1px solid #D9EAEC;
     border-radius: 4px;
@@ -811,6 +842,8 @@ select:focus {
     color: var(--color-charcoal);
     font-size: 16px;
     font-weight: 400;
+    -webkit-transition: all ease-in-out 0.1s;
+    -o-transition: all ease-in-out 0.1s;
     transition: all ease-in-out 0.1s;
     border: 1px solid #D9EAEC;
     border-radius: 4px;
@@ -842,6 +875,26 @@ button::-moz-focus-inner,
 textarea:focus {
     outline: none;
     border: 2px solid var(--color-teal);
+}
+
+[type="text"]::-webkit-input-placeholder, [type="date"]::-webkit-input-placeholder, [type="datetime"]::-webkit-input-placeholder, [type="datetime-local"]::-webkit-input-placeholder, [type="email"]::-webkit-input-placeholder, [type="month"]::-webkit-input-placeholder, [type="number"]::-webkit-input-placeholder, [type="password"]::-webkit-input-placeholder, [type="search"]::-webkit-input-placeholder, [type="tel"]::-webkit-input-placeholder, [type="url"]::-webkit-input-placeholder, [type="week"]::-webkit-input-placeholder, [type="date"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: var(--color-charcoal);
+    opacity: 0.6;
+}
+
+[type="text"]::-moz-placeholder, [type="date"]::-moz-placeholder, [type="datetime"]::-moz-placeholder, [type="datetime-local"]::-moz-placeholder, [type="email"]::-moz-placeholder, [type="month"]::-moz-placeholder, [type="number"]::-moz-placeholder, [type="password"]::-moz-placeholder, [type="search"]::-moz-placeholder, [type="tel"]::-moz-placeholder, [type="url"]::-moz-placeholder, [type="week"]::-moz-placeholder, [type="date"]::-moz-placeholder, textarea::-moz-placeholder {
+    color: var(--color-charcoal);
+    opacity: 0.6;
+}
+
+[type="text"]:-ms-input-placeholder, [type="date"]:-ms-input-placeholder, [type="datetime"]:-ms-input-placeholder, [type="datetime-local"]:-ms-input-placeholder, [type="email"]:-ms-input-placeholder, [type="month"]:-ms-input-placeholder, [type="number"]:-ms-input-placeholder, [type="password"]:-ms-input-placeholder, [type="search"]:-ms-input-placeholder, [type="tel"]:-ms-input-placeholder, [type="url"]:-ms-input-placeholder, [type="week"]:-ms-input-placeholder, [type="date"]:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: var(--color-charcoal);
+    opacity: 0.6;
+}
+
+[type="text"]::-ms-input-placeholder, [type="date"]::-ms-input-placeholder, [type="datetime"]::-ms-input-placeholder, [type="datetime-local"]::-ms-input-placeholder, [type="email"]::-ms-input-placeholder, [type="month"]::-ms-input-placeholder, [type="number"]::-ms-input-placeholder, [type="password"]::-ms-input-placeholder, [type="search"]::-ms-input-placeholder, [type="tel"]::-ms-input-placeholder, [type="url"]::-ms-input-placeholder, [type="week"]::-ms-input-placeholder, [type="date"]::-ms-input-placeholder, textarea::-ms-input-placeholder {
+    color: var(--color-charcoal);
+    opacity: 0.6;
 }
 
 [type="text"]::placeholder,
@@ -915,7 +968,6 @@ textarea::placeholder {
 
 @media(min-width: 1025px) {
     .sticky-sidebar {
-        position: -webkit-sticky;
         position: sticky;
         top: 125px;
     }

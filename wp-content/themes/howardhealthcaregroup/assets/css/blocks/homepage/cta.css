@@ -1,4 +1,13 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .cta {
+    background: -webkit-gradient(linear,  left top, right top,  from(rgba(29,66,138,1)),color-stop(41%, rgba(0,118,128,0.75)),to(rgba(0,118,128,0.15)));
+    background: -o-linear-gradient(left,  rgba(29,66,138,1) 0%,rgba(0,118,128,0.75) 41%,rgba(0,118,128,0.15) 100%);
     background: linear-gradient(to right,  rgba(29,66,138,1) 0%,rgba(0,118,128,0.75) 41%,rgba(0,118,128,0.15) 100%);
     color: var(--color-white);
 }
@@ -21,12 +30,18 @@
     border-radius: 4px;
     margin-top: 10px;
     position: relative;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out;
     transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 @media (min-width: 1200px) {
     .cta__info__wrap:hover {
-        transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+                transform: scale(1.05);
     }
 }
 
@@ -45,8 +60,12 @@
     font-weight: 700;
     padding: 0 0;
     background: transparent;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .cta__info__wrap a i {
@@ -77,10 +96,17 @@
     }
 
     .cta__wrap {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: flex-start;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
     }
 
     .cta__content {
@@ -113,18 +139,28 @@
 }
 
 .cta--newsletter {
+    background: -webkit-gradient(linear,  left top, left bottom,  from(rgba(29,66,138,1)),color-stop(50%, rgba(0,118,128,0.75)),to(rgba(0,118,128,0.15)));
+    background: -o-linear-gradient(top,  rgba(29,66,138,1) 0%,rgba(0,118,128,0.75) 50%,rgba(0,118,128,0.15) 100%);
     background: linear-gradient(to bottom,  rgba(29,66,138,1) 0%,rgba(0,118,128,0.75) 50%,rgba(0,118,128,0.15) 100%);
 }
 
 @media (min-width: 768px) {
     .cta {
+        background: -webkit-gradient(linear,  left top, right top,  from(rgba(29,66,138,1)),color-stop(41%, rgba(0,118,128,0.75)),to(rgba(0,118,128,0.15)));
+        background: -o-linear-gradient(left,  rgba(29,66,138,1) 0%,rgba(0,118,128,0.75) 41%,rgba(0,118,128,0.15) 100%);
         background: linear-gradient(to right,  rgba(29,66,138,1) 0%,rgba(0,118,128,0.75) 41%,rgba(0,118,128,0.15) 100%);
     }
 
     .cta__info-inner {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     .cta__info-inner .btn {
@@ -147,7 +183,9 @@
 
 .cta--newsletter .cta__info-inner {
     position: relative;
-    align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
 }
 
 .cta--newsletter .cta__info-inner input:not([type=submit]) {

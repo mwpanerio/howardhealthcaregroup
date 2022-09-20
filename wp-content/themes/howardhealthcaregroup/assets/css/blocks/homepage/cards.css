@@ -1,24 +1,52 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .cards__top-content {
     padding-bottom: 24px;
 }
 
 .card-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: stretch;
-    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     text-decoration: none;
     height: 100%;
+    -webkit-transition: -webkit-transform .2s linear;
+    transition: -webkit-transform .2s linear;
+    -o-transition: transform .2s linear;
     transition: transform .2s linear;
+    transition: transform .2s linear, -webkit-transform .2s linear;
     background: var(--color-white);
     border-radius: 4px;
-    box-shadow: 0 0 16px rgba(29, 66, 138, 0.16);
+    -webkit-box-shadow: 0 0 16px rgba(29, 66, 138, 0.16);
+            box-shadow: 0 0 16px rgba(29, 66, 138, 0.16);
+    -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+    transition: -webkit-box-shadow 0.3s ease-in-out;
+    -o-transition: box-shadow 0.3s ease-in-out;
     transition: box-shadow 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
 .card__img-wrap {
@@ -65,25 +93,46 @@
 
 @media (min-width: 1200px) {
     .card:hover {
-        box-shadow: 0 0 16px rgba(29, 66, 138, 0.50);
+        -webkit-box-shadow: 0 0 16px rgba(29, 66, 138, 0.50);
+                box-shadow: 0 0 16px rgba(29, 66, 138, 0.50);
     }
 
     .card:hover .btn-tertiary:after {
-        animation: shake 5s ease infinite;
+        -webkit-animation: shake 5s ease infinite;
+                animation: shake 5s ease infinite;
     }
 
     .card-item {
-        filter: blur(0px);
-        transform: scale(1);
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+                transform: scale(1);
         opacity: 1;
+        -webkit-transition: opacity 0.3s ease-in-out,
+                    -webkit-filter 0.3s ease-in-out,
+                    -webkit-transform 0.25s ease-in-out;
+        transition: opacity 0.3s ease-in-out,
+                    -webkit-filter 0.3s ease-in-out,
+                    -webkit-transform 0.25s ease-in-out;
+        -o-transition: filter 0.3s ease-in-out,
+                    opacity 0.3s ease-in-out,
+                    transform 0.25s ease-in-out;
         transition: filter 0.3s ease-in-out,
                     opacity 0.3s ease-in-out,
                     transform 0.25s ease-in-out;
+        transition: filter 0.3s ease-in-out,
+                    opacity 0.3s ease-in-out,
+                    transform 0.25s ease-in-out,
+                    -webkit-filter 0.3s ease-in-out,
+                    -webkit-transform 0.25s ease-in-out;
     }
 
     
     .card-item.is-not-focused {
-        transform: scale(0.95);
+        -webkit-transform: scale(0.95);
+            -ms-transform: scale(0.95);
+                transform: scale(0.95);
         opacity: 0.65;
     }
 }
@@ -97,6 +146,5 @@
     }
     
 }
-
 
 

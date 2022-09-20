@@ -1,19 +1,39 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .card-icon-item {
     margin-top: 20px;
 }
 
 .card-icon-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: stretch;
-    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .card-icon {
     background: var(--color-white);
-    box-shadow: 0 0 8px rgba(29,66,138,0.16);
+    -webkit-box-shadow: 0 0 8px rgba(29,66,138,0.16);
+            box-shadow: 0 0 8px rgba(29,66,138,0.16);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     text-decoration: none;
     height: 100%;
     border-radius: 4px;
@@ -71,8 +91,12 @@
 }
 
 .card-icon--home .card-icon__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 10px 19px 10px 19px;
     height: 53px;
 }
@@ -123,9 +147,15 @@
     font-size: 22px;
     line-height: 2em;
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .cards-icon--inner .card-icon__img-wrap svg.card-icon__svg-1 {
@@ -161,8 +191,12 @@
 
     .card-icon--home .card-icon__bottom {
         display: block;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         background-color: var(--color-teal);
         border-radius: 0 0 4px 4px;
     }
@@ -248,8 +282,12 @@
     .card-icon--home .card-icon__bottom,
     .card-icon__bottom {
         display: block;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         background-color: transparent;
         border-radius: 0 0 4px 4px;
     }
@@ -265,15 +303,28 @@
         width: 50px;
         border-radius: 0px;
         margin-left: auto;
+        -webkit-transition: width 0.3s ease-in-out;
+        -o-transition: width 0.3s ease-in-out;
         transition: width 0.3s ease-in-out;
     }
 
     .card-icon__bottom .btn {
-        transform: translateX(-110px);
+        -webkit-transform: translateX(-110px);
+            -ms-transform: translateX(-110px);
+                transform: translateX(-110px);
         border-radius: 0 4px 4px 0;
         white-space: nowrap;
+        -webkit-transition: width 0.3s ease-in-out,
+                    -webkit-transform 0.3s ease-in-out;
+        transition: width 0.3s ease-in-out,
+                    -webkit-transform 0.3s ease-in-out;
+        -o-transition: width 0.3s ease-in-out,
+                    transform 0.3s ease-in-out;
         transition: width 0.3s ease-in-out,
                     transform 0.3s ease-in-out;
+        transition: width 0.3s ease-in-out,
+                    transform 0.3s ease-in-out,
+                    -webkit-transform 0.3s ease-in-out;
     }
 
     .card-icon__bottom::before {
@@ -290,7 +341,9 @@
     }
 
     .card-icon--link:hover .btn {
-        transform: translateX(0);
+        -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+                transform: translateX(0);
     }
 
     .card-icon--link:hover .card-icon__bottom {
@@ -302,27 +355,48 @@
     }
 
     .card-icon:hover {
-        box-shadow: 0 0 16px rgba(29,66,138,0.5);
+        -webkit-box-shadow: 0 0 16px rgba(29,66,138,0.5);
+                box-shadow: 0 0 16px rgba(29,66,138,0.5);
     }
 
     .card-icon-item {
         margin-top: 24px;
-        transform: scale(1);
+        -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+                transform: scale(1);
         opacity: 1;
+        -webkit-transition: opacity 0.3s ease-in-out,
+                    -webkit-filter 0.3s ease-in-out,
+                    -webkit-transform 0.25s ease-in-out;
+        transition: opacity 0.3s ease-in-out,
+                    -webkit-filter 0.3s ease-in-out,
+                    -webkit-transform 0.25s ease-in-out;
+        -o-transition: filter 0.3s ease-in-out,
+                    opacity 0.3s ease-in-out,
+                    transform 0.25s ease-in-out;
         transition: filter 0.3s ease-in-out,
                     opacity 0.3s ease-in-out,
-                    transform 0.25s ease-in-out;;
+                    transform 0.25s ease-in-out;
+        transition: filter 0.3s ease-in-out,
+                    opacity 0.3s ease-in-out,
+                    transform 0.25s ease-in-out,
+                    -webkit-filter 0.3s ease-in-out,
+                    -webkit-transform 0.25s ease-in-out;;
     }
 
     
     .card-icon-item.is-not-focused {
-        transform: scale(0.95);
+        -webkit-transform: scale(0.95);
+            -ms-transform: scale(0.95);
+                transform: scale(0.95);
         opacity: 0.65;
     }
 }
 
 .cards-icon .card-icon-flex {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: 0 -16px;
 }
 
@@ -400,8 +474,12 @@
     }
 
     .text-block-icon__wrap {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
 
     .text-block-icon__image {
