@@ -5,6 +5,12 @@
 * Browsers: last 4 version
 */
 
+.image-buttons ul,
+.image-buttons ol {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .image-buttons__row {
     -webkit-box-pack: center;
         -ms-flex-pack: center;

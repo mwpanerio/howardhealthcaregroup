@@ -387,13 +387,13 @@ ul, ol {
     width: auto;
     overflow: hidden;
     padding-left: 15px;
-
 }
 
-ol,
-ul {
-    display: inline-block;
-    width: auto;
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+    padding-left: 15px;
 }
 
 .page-content ul {
@@ -408,6 +408,7 @@ ol li {
     counter-increment: list;
     position: relative;
     list-style-type: none;
+    padding-left: 25px;
 }
 
 ol li:before {
