@@ -91,6 +91,20 @@
     margin-top: 55px;
 }
 
+.card-flex {
+    justify-content: center;
+}
+
+.card-item:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+@media (min-width: 1200px) {
+    .card-item:not(:last-child) {
+        margin-bottom: 0;
+    }
+}
+
 @media (min-width: 1200px) {
     .card:hover {
         -webkit-box-shadow: 0 0 16px rgba(29, 66, 138, 0.50);
