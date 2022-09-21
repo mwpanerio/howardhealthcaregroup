@@ -6,10 +6,10 @@
         <div class="text-block-icon__wrap">
             <?php if($icon_with_texts): ?>
             <div class="text-block-icon__icon">
-                <div class="row card-icon-flex">
+                <div class="row card-icon-flex js-card-icon-container">
                     <?php while(have_rows('icon_with_text')): the_row(); ?>
                     <div class="col-lg-4 col-sm-6 col-xxs-12 card-icon-item js-card-article">
-                        <a class="card-icon card-icon--home card-icon--link" href="#">
+                        <a class="card-icon card-icon--home card-icon--link js-card-icon-item" href="<?php echo get_sub_field('link')['url']; ?>">
                             <div class="card-icon__top">
                                 <div class="card-icon__img-wrap">
                                     <div class="card-icon__icon">

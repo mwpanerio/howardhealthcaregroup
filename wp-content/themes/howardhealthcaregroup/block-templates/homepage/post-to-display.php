@@ -8,7 +8,7 @@
                     </h5>
                     <h2><?php echo get_field('title'); ?></h2>
                 </div>
-                <div class="row card-flex">
+                <div class="row card-flex js-card-container">
                     <?php
                         $posts = get_field('posts_to_display');
 
