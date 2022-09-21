@@ -319,6 +319,17 @@ function fx_theme_scripts() {
             'enqueue'       => ( has_block('acf/homepage-masthead-slider') ),
         ]
     );
+
+    fx_assets_add_script(
+        [
+            'handle'        => 'site-homepage-animation',
+            'src'           => $theme_url . '/assets/js/blocks/homepage/homepage-animation.js',
+            'dependencies'  => [ 'jquery', 'fx_scroll_trigger', 'fx_gsap', 'fx_animation_scrollmagic'],
+            'enqueue'       => is_front_page(),
+            'defer'         => true,
+            'preload'       => true,
+        ]
+    );
     
 
     /**
@@ -432,6 +443,39 @@ function fx_theme_scripts() {
             'src'           => $theme_url . '/assets/js/plugins/FormatPhoneNumbers.js',
             'dependencies'  => [ 'jquery' ],
             'defer'         => true,
+        ]
+    );
+
+    fx_assets_add_script(
+        [
+            'handle'        => 'fx_gsap',
+            'src'           => $theme_url . '/assets/js/plugins/gsap.min.js',
+            'defer'         => true,
+        ]
+    );
+
+    fx_assets_add_script(
+        [
+            'handle'        => 'fx_scroll_trigger',
+            'src'           => $theme_url . '/assets/js/plugins/ScrollTrigger.min.js',
+            'dependencies'  => [ 'fx_gsap' ],
+        ]
+    );
+
+    fx_assets_add_script(
+        [
+            'handle'        => 'fx_scrollmagic',
+            'src'           => $theme_url . '/assets/js/plugins/ScrollMagic.min.js',
+            'defer'         => true,
+        ]
+    );
+
+    fx_assets_add_script(
+        [
+            'handle'        => 'fx_animation_scrollmagic',
+            'src'           => $theme_url . '/assets/js/plugins/animation.gsap.min.js',
+            'defer'         => true,
+            'dependencies'  => [ 'fx_scrollmagic' ],
         ]
     );
 

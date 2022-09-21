@@ -1,4 +1,7 @@
-<?php if( have_rows( 'slides' ) ): ?>
+<?php 
+    $slides = get_field('slides');
+    if( have_rows( 'slides' ) ):
+?>
 
 <section class="masthead masthead--homepage js-masthead-homepage-slider fx-slider">
     
@@ -6,17 +9,31 @@
     <?php $skip_lazy = true; // skip lazy loading for first image to improve paint times
     while( have_rows( 'slides' ) ): the_row(); ?>
         <article class="masthead-slide fx-slide">
-
-            <?php echo fx_get_image_tag( get_sub_field( 'background_image' ), 'masthead-bg object-fit', ); ?>
+            <div class="masthead-slide__background">
+                <?php echo fx_get_image_tag( get_sub_field( 'background_image' ), 'masthead-bg object-fit', ); ?>
+            </div>
             <div class="masthead__content">
                 <div class="container">
-                    <div class="masthead__content__wrap">
-                        <h5><span> <?php the_sub_field( 'subheading' ); ?> </span></h5>
-                        <h2 class="masthead-slide__title h1"><?php the_sub_field( 'headline' ); ?></h2>
+                    <div class="masthead__content__wrap masthead-animation js-masthead-animation">
+                        <div class="masthead-animation-item js-masthead-animation-item">
+                            <h5><span> <?php the_sub_field( 'subheading' ); ?> </span></h5>
+                        </div>
+                        <div class="masthead-animation-item js-masthead-animation-item">
+                            <h2 class="masthead-slide__title h1"><?php the_sub_field( 'headline' ); ?></h2>
+                        </div>
                         <?php if($button = get_sub_field('button')): ?>
-                            <a href="<?php echo $button['url']; ?>" class="btn btn-white"<?php echo $button['target'] ? ' target="' . $button['target'] . '"' : ''; ?>>
-                                <i class="icon-phone"></i> <?php echo $button['title']; ?>
-                            </a>
+                            <div class="masthead-animation-item js-masthead-animation-item">
+                                <a href="<?php echo $button['url']; ?>" class="btn btn-white"<?php echo $button['target'] ? ' target="' . $button['target'] . '"' : ''; ?>>
+                                    <i class="icon-phone"></i> <?php echo $button['title']; ?>
+                                </a>
+                            </div>
+                        <?php endif; ?>
+                        <?php if(count($slides) > 1): ?>
+                            <div class="masthead__content__dots masthead-animation-item js-masthead-animation-item">
+                                <?php $slide_count = 0; foreach($slides as $slide): ?>
+                                <button class="<?php echo $slide_count == 0 ? 'is-active ': ''; ?>js-masthead-dot" data-slide-dots="<?php echo $slide_count; ?>"></button>
+                                <?php $slide_count++; endforeach ?>
+                            </div>
                         <?php endif; ?>
                     </div>
                 </div>

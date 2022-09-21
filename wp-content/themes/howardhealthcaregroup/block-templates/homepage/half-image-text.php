@@ -2,13 +2,17 @@
     $image_position = get_field('image_position');
     $image = get_field('image');
 ?>
-<section class="image-text section-padding">
+<section class="image-text image-text--homepage section-padding">
     <div class="container">
         <div class="row flex-row<?php echo $image_position = 'right' ? ' flex-opposite' : ''; ?>">
             <div class="col-md-6 image-text__half image-text__img">
-                <?php echo fx_get_image_tag($image, 'object-fit'); ?>
+                <div class="image-text__img__wrapper">
+                    <span class="image-text__img__overlay"></span>
+                    <?php echo fx_get_image_tag($image, 'object-fit'); ?>
+                </div>
                 <?php while(have_rows('content_below_the_image')): the_row(); ?>
                 <div class="image-text__img__info">
+                    <span></span>
                     <h4>
                         <span>
                             <i class="icon-house"></i>

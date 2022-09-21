@@ -427,11 +427,18 @@
     padding-top: 65px;
 }
 
-.text-block-icon__image {
-    padding: 15px 38px 0 38px;
+.text-block-icon__text > * {
+    opacity: 0;
+    top: -50px;
 }
 
-.text-block-icon__image img {
+.text-block-icon__text p,
+.text-block-icon__text a {
+    position: relative;
+}
+
+.text-block-icon__image {
+    padding: 15px 38px 0 38px;
     mix-blend-mode: multiply;
 }
 
@@ -532,4 +539,10 @@
         width: auto;
         height: auto;
     }
+}
+
+.card-icon {
+    transform: scale(0.85) translate(0, -20px);
+    opacity: 0;
+    transition: none;
 }
