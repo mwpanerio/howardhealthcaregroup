@@ -307,3 +307,54 @@
     position: relative; 
     opacity: 0;
 }
+
+.image-text-floating--homepage .image-text__img__large {
+    position: relative;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.image-text-floating--homepage .image-text__img__small {
+    transform: scaleY(0);
+    transform-origin: bottom;
+}
+
+.image-text-floating--homepage .image-text__img__large > span,
+.image-text-floating--homepage .image-text__img__small > span {
+    width: calc(100% - 55px);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-teal);
+}
+
+.image-text-floating--homepage .image-text__img__large > span {
+    transform: scaleY(1);
+    transform-origin: bottom;
+}
+
+.image-text-floating--homepage .image-text__img__small > span {
+    background-color: var(--color-light-teal);
+    width: 100%;
+    transform: scaleY(1);
+    transform-origin: top;
+}
+
+@media (min-width: 768px) {
+    .image-text-floating--homepage .image-text__img__large > span {
+        width: calc(100% - 110px);
+    }
+}
+
+@media (min-width: 1200px) {
+    .image-text-floating--homepage .image-text__img__large > span {
+        width: calc(100% - 82px);
+    }
+}
+
+.image-text-floating--homepage .image-text__text > * {
+    position: relative;
+    transform: translate(0, 50px);
+    opacity: 0;
+}
