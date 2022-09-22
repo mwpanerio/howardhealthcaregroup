@@ -94,6 +94,59 @@ var FX = ( function( FX, $ ) {
             })
             .setTween(imageTextAnimation)
             .addTo(controller);
+
+            const fullWidthAnimationTimeline = new TimelineMax()
+                .to('.full-width-image-text__wrapper', 0.6, {
+                    'transform': 'scaleY(1)',
+                })
+                .to('.full-width-image-text__overlay', 0.6, {
+                    'transform': 'scaleY(0)',
+                })
+                .staggerTo('.full-width-image-text__content > *', 0.8, {
+                    'transform': 'translate(0, 0)',
+                    opacity : 1
+                }, 0.15)
+
+            const fullWidthAnimationScene = new ScrollMagic.Scene({
+                triggerElement: '.full-width-image-text__content',
+                triggerHook: 0.85
+            })
+            .setTween(fullWidthAnimationTimeline)
+            .addTo(controller);
+
+            const floatingImageTimeline = new TimelineMax()
+                .to('.image-text__img__large', 0.6, {
+                    'transform': 'scaleY(1)',
+                })
+                .to('.image-text__img__large > span', 0.6, {
+                    'transform': 'scaleY(0)',
+                })
+                .to('.image-text__img__small', 0.6, {
+                    'transform': 'scaleY(1)',
+                }, '-=0.7')
+                .to('.image-text__img__small > span', 0.6, {
+                    'transform': 'scaleY(0)',
+                })
+
+            const floatingImageScene = new ScrollMagic.Scene({
+                triggerElement: '.image-text-floating--homepage .image-text__img__overlay',
+                triggerHook: 0.85
+            })
+            .setTween(floatingImageTimeline)
+            .addTo(controller);
+
+            const floatingImageContentTimeline = new TimelineMax()
+                .staggerTo('.image-text-floating--homepage .image-text__text > *', 0.8, {
+                    'transform': 'translate(0,0) scale(1)',
+                    opacity: 1
+                }, 0.25)
+
+            const floatingImageContentScene = new ScrollMagic.Scene({
+                triggerElement: '.image-text-floating--homepage .image-text__text',
+                triggerHook: 0.85
+            })
+            .setTween(floatingImageContentTimeline)
+            .addTo(controller);
 		},
 	}
 

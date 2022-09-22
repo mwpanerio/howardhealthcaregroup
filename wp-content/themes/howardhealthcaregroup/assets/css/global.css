@@ -313,8 +313,8 @@ h5 span::after,
 }
 
 p {
-   margin:0;
-   padding: 0 0 20px; 
+   margin: 0 0 20px;
+   padding: 0 0 0; 
    font-size: 16px;
    line-height: 1.62em;
    font-weight: normal;
