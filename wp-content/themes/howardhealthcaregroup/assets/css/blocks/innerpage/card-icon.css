@@ -162,6 +162,11 @@
     width: 48px;
 }
 
+.cards-icon--inner ul, .cards-icon--inner ol {
+    display: inline-block;
+    width: auto;
+}
+
 .cards-icon--inner .card-icon__img-wrap svg.card-icon__svg-2 {
     width: 66px;
 }
