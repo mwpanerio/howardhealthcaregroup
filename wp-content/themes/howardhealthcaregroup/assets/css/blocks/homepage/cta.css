@@ -217,6 +217,11 @@
     margin-bottom: 10px;
 }
 
+.cta--newsletter .mailpoet_text {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
 .cta--newsletter .parsley-errors-list {
     list-style-type: none;
 }
