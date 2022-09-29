@@ -223,6 +223,10 @@
         flex-direction: column;
     }
 
+    .image-button:hover .image-button__hidden {
+        max-height: 100%;
+    }
+
     .image-button__cta {
         position: relative;
         margin-top: auto;
