@@ -19,7 +19,7 @@
             <?php if(have_rows('image_buttons')): ?>
             <?php while(have_rows('image_buttons')): the_row(); ?>
             <div class="col-lg-4 col-sm-6 col-xxs-12">
-                <a class="image-button image-button--link" href="<?php echo get_sub_field('link')['url']; ?>"<?php echo get_sub_field('link')['target'] ? ' target="' . get_sub_field('link')['target'] . '"': ''; ?>>
+                <a class="image-button image-button--link<?php echo get_sub_field('description') ? ' image-button--no-description' : ''; ?>" href="<?php echo get_sub_field('link')['url']; ?>"<?php echo get_sub_field('link')['target'] ? ' target="' . get_sub_field('link')['target'] . '"': ''; ?>>
                     <?php echo fx_get_image_tag(get_sub_field('image'), 'image-button__img'); ?>
                     <div class="image-button__hidden">
                         <div class="image-button__hidden__content">
