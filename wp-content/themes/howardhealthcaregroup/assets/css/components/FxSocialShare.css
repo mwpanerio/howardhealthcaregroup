@@ -23,7 +23,13 @@
 @media (min-width: 1200px) {
     .social-share-row {
         text-align: left;
+        margin-top: 40px;
     }
+}
+
+.social-share-row .btn {
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 .social-share-row__item {
@@ -47,7 +53,8 @@
 .resp-sharing-button__link {
     text-decoration: none;
     color: var(--color-white);
-    margin: 0.5em
+    margin: 0.5em;
+    background-image: none;
 }
 
 .social-share-row__item:first-child .resp-sharing-button__link {

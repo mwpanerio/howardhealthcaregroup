@@ -36,4 +36,7 @@
             </div>
         </a>
     </li>
+    <li class="social-share-row__item">
+        <button onclick="window.print()" class="btn btn-primary">Save as PDF</button>
+    </li>
 </ul>
