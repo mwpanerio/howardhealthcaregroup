@@ -83,4 +83,24 @@
     .slick-track.slick-slide {
         width: auto !important;
     }
+
+    .page-header,
+    .page-sidebar,
+    .page-footer,
+    .post-pagination,
+    .social-share-row,
+    .back-to-page,
+    .single-post .cta {
+        display: none;
+    }
+
+    .blog-single-container,
+    .single-post .wysiwyg,
+    .single-post .wysiwyg .container {
+        background-color: var(--color-white);
+    }
+
+    .single-post .wysiwyg .container {
+        padding: 0;
+    }
 }
