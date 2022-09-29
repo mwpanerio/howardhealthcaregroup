@@ -3,16 +3,16 @@
 <?php get_template_part('partials/masthead'); ?>
 
 <?php if( have_posts() ): ?>
-    <section class="<?php echo get_post_type(); ?>-listing-container js-load-more-block bg-gray section-padding" data-load-more-post-type="<?php echo get_post_type(); ?>">
+    <section class="blog-listing-container js-load-more-block bg-gray section-padding" data-load-more-post-type="<?php echo get_post_type(); ?>">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
-                    <div class="<?php echo get_post_type(); ?>-listing js-load-more-posts">    
+                    <div class="blog-listing js-load-more-posts">    
                         <?php while( have_posts() ): the_post(); ?>
                             <?php get_template_part( 'partials/loop-content' ); ?>
                         <?php endwhile; ?>
                     </div>
-                    <div class="<?php echo get_post_type(); ?>-listing__pagination">
+                    <div class="blog-listing__pagination">
                         <div class="col-xxs-12">
                             <?php get_template_part( 'partials/pagination' ); ?> 
                         </div>
