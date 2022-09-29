@@ -125,6 +125,7 @@ var FX = ( function( FX, $ ) {
 					slidesToScroll: 1,
 					vertical: true,
 					verticalSwiping: true,
+					centerMode: true,
 				});
 			}
 

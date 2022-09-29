@@ -21,17 +21,18 @@
             <div class="col-lg-4 col-sm-6 col-xxs-12">
                 <a class="image-button image-button--link" href="<?php echo get_sub_field('link')['url']; ?>"<?php echo get_sub_field('link')['target'] ? ' target="' . get_sub_field('link')['target'] . '"': ''; ?>>
                     <?php echo fx_get_image_tag(get_sub_field('image'), 'image-button__img'); ?>
-                    <div class="image-button__hover">
-                        <?php if($image_button_title = get_sub_field('title')): ?>
-                            <h4 class="image-button__title"><?php echo $image_button_title; ?></span></h4>
-                        <?php endif; ?>
-                        <div class="image-button__hidden hidden-md-down">
+                    <div class="image-button__hidden">
+                        <div class="image-button__hidden__content">
+                            <?php if($image_button_title = get_sub_field('title')): ?>
+                                <h4 class="image-button__title"><?php echo $image_button_title; ?></span></h4>
+                            <?php endif; ?>
                             <?php if($image_button_description = get_sub_field('description')): ?>
                                 <span class="image-button__description"> <?php echo $image_button_description; ?> </span>
                             <?php endif; ?>
-                            <div class="image-button__cta">
-                                <span class="btn btn-tertiary">Read More</span>
-                            </div>
+                        </div>
+                        <div class="image-button__cta">
+                            <span class="h4 image-button__cta__title"><?php echo $image_button_title; ?></span>
+                            <span class="btn btn-tertiary">Read More</span>
                         </div>
                     </div>
                 </a>

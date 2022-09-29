@@ -178,6 +178,10 @@
 }
 
 .slick-active .testimonials-content {
+    opacity: 1;
+}
+
+.slick-active .testimonials-content {
     -webkit-transform: scale(1);
         -ms-transform: scale(1);
             transform: scale(1);
