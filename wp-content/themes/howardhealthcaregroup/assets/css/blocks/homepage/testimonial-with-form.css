@@ -212,7 +212,11 @@
 }
 
 .testimonials-column {
-    margin: 0 -17px;
+    margin: -30px -17px;
+}
+
+.testimonials-column .testimonials-item {
+    padding: 0 20px;
 }
 
 .testimonials-column .slick-list {
