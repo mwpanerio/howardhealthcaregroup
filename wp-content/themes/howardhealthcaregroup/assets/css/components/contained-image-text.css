@@ -28,8 +28,8 @@
 }
 
 .column-reverse .image-text__text {
-    padding-top: 0;
-    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-bottom: 0;
 }
 
 .image-text .btn {
@@ -48,6 +48,7 @@
     background: var(--color-white);
     padding: 25px 30px 20px;
     box-shadow: 0 0 16px rgba(29, 66, 138, 0.16);
+    border-radius: 4px;
 }
 
 .image-text__img__info h4 {
@@ -140,8 +141,8 @@
     }
 
     .column-reverse .image-text__text {
-        padding-top: 0;
-        padding-bottom: 90px;
+        padding-bottom: 0;
+        padding-top: 90px;
     }
 
     .image-text__text h5 br {
@@ -262,6 +263,7 @@
     .image-text--inner .column-reverse .image-text__text,
     .image-text--two-image .column-reverse .image-text__text {
         padding-bottom: 0;
+        padding-top: 0;
     }
 
     .image-text--inner .image-text__img {

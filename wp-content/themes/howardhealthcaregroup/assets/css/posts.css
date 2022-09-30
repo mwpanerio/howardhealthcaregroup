@@ -16,11 +16,13 @@
 
 .single-post .wysiwyg {
     padding: 35px 15px;
+    margin: -72px -20px 0;
 }
 
 @media (min-width: 768px) {
     .single-post .wysiwyg {
         padding: 35px 15px;
+        margin: 0;
     }
 }
 
