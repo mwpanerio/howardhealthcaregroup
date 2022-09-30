@@ -71,6 +71,10 @@
     padding: 27px 0 12px;
 }
 
+.footer-contact-col p {
+    margin-bottom: 0;
+}
+
 .footer-links-col {
     padding: 20px 0 12px;
 }
@@ -198,9 +202,6 @@
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;
-        -webkit-box-align: start;
-            -ms-flex-align: start;
-                align-items: flex-start;
     }
 
     .column {

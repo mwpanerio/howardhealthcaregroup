@@ -157,9 +157,6 @@
     }
 }
 @media (min-width: 1366px) {
-    .card__img-wrap {
-        padding: 0 0;
-    }
 
     .cards__top-content {
         padding-bottom: 15px;

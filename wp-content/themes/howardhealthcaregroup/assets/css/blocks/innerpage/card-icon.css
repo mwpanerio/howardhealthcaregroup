@@ -264,6 +264,9 @@
         border-bottom: 2px solid rgba(29,66,138,0.15);
         width: auto;
         height: 102px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .card-icon__title{
