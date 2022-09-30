@@ -259,6 +259,9 @@
         border-bottom: 2px solid rgba(29,66,138,0.15);
         width: auto;
         height: 102px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .card-icon__title{
@@ -440,6 +443,10 @@
 .text-block-icon__image {
     padding: 15px 38px 0 38px;
     mix-blend-mode: multiply;
+}
+
+.text-block-icon__image img {
+    height: auto;
 }
 
 .text-block-icon__text .btn-tertiary {

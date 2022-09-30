@@ -139,7 +139,8 @@
         margin-left: -25px;
     }
 
-    .contact-details .form-block .col-sm-6 {
+    .contact-details .form-block .col-sm-6,
+    .contact-details .form-block .col-sm-12 {
         padding-right: 25px;
         padding-left: 25px;
     }

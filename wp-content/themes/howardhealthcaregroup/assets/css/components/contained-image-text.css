@@ -126,6 +126,10 @@
     margin: -123px auto 0 0;
 }
 
+.image-text__img__info p:last-of-type {
+    margin-bottom: 0;
+}
+
 @media (min-width: 768px) {
     .image-text__img {
         height: 410px;
