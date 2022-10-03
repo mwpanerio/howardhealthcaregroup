@@ -984,7 +984,7 @@
 
 .breadcrumbs a {}
 
-.breadcrumbs li:not(:last-child) a {
+.breadcrumbs li a {
     border-right: 1px solid var(--color-white);
 }
 
