@@ -73,6 +73,7 @@
 
 .footer-contact-col p {
     margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .footer-links-col {
@@ -101,7 +102,7 @@
 .footer-wrap p i {
     font-size: 21px;
     color: var(--color-teal);
-    font-weight: normal;
+    font-weight: bold;
     position: absolute;
     left: 0;
     top: 3px;
@@ -263,6 +264,7 @@
     }
 
     .footer-phone {
+        margin-top: 20px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;

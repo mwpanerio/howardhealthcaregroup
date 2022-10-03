@@ -161,6 +161,7 @@
 
     .image-text__img__overlay {
         max-width: 664px;
+        margin: 0 auto;
     }
     
     .image-text__img__large {
@@ -233,6 +234,7 @@
 
     .image-text__img__overlay {
         max-width: 664px;
+        margin: 0;
     }
     
     .image-text__img__large {
