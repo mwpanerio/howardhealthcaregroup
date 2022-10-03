@@ -263,6 +263,10 @@
                 flex-direction: column;
     }
 
+    .footer-wrap p {
+        padding-bottom: 5px;
+    }
+
     .footer-phone {
         margin-top: 20px;
         display: -webkit-box;
