@@ -947,7 +947,7 @@
 .breadcrumbs li {
     list-style-type: none;
     margin: 0;
-    padding: 0 10px;
+    padding: 0 0 0 10px;
     font-size: 16px;
     color: var(--color-white);
     position: relative;
@@ -968,7 +968,7 @@
     padding-left: 0;
 }
 
-.breadcrumbs li:first-child::after {
+.breadcrumbs li::after {
     display: none;
 }
 
@@ -982,12 +982,10 @@
     margin-right: 10px;
 }
 
-.breadcrumbs a {
-    border-right: 1px solid var(--color-white);
-}
+.breadcrumbs a {}
 
-.breadcrumbs li:last-child a {
-    border-right: 0;
+.breadcrumbs li:not(:last-child) a {
+    border-right: 1px solid var(--color-white);
 }
 
 .breadcrumbs li::before {
