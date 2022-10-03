@@ -947,7 +947,7 @@
 .breadcrumbs li {
     list-style-type: none;
     margin: 0;
-    padding: 0 0 0 10px;
+    padding: 0 10px 0 0;
     font-size: 16px;
     color: var(--color-white);
     position: relative;
